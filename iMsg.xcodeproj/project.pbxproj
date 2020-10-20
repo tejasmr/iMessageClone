@@ -13,6 +13,8 @@
 		7B3168E8253DD9CB00640989 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3168E7253DD9CB00640989 /* Preview Assets.xcassets */; };
 		7B3168F3253DD9CB00640989 /* iMsgTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3168F2253DD9CB00640989 /* iMsgTests.swift */; };
 		7B3168FE253DD9CB00640989 /* iMsgUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3168FD253DD9CB00640989 /* iMsgUITests.swift */; };
+		7B31690F253DDC4E00640989 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B31690E253DDC4E00640989 /* ChatView.swift */; };
+		7B316914253DDC9000640989 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B316913253DDC9000640989 /* ChatBubble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		7B3168F9253DD9CB00640989 /* iMsgUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMsgUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3168FD253DD9CB00640989 /* iMsgUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMsgUITests.swift; sourceTree = "<group>"; };
 		7B3168FF253DD9CB00640989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B31690E253DDC4E00640989 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		7B316913253DDC9000640989 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				7B3168E0253DD9C800640989 /* iMsgApp.swift */,
 				7B3168E2253DD9C800640989 /* ContentView.swift */,
+				7B31690E253DDC4E00640989 /* ChatView.swift */,
+				7B316913253DDC9000640989 /* ChatBubble.swift */,
 				7B3168E4253DD9CB00640989 /* Assets.xcassets */,
 				7B3168E9253DD9CB00640989 /* Info.plist */,
 				7B3168E6253DD9CB00640989 /* Preview Content */,
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3168E3253DD9C800640989 /* ContentView.swift in Sources */,
+				7B31690F253DDC4E00640989 /* ChatView.swift in Sources */,
 				7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */,
+				7B316914253DDC9000640989 /* ChatBubble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
