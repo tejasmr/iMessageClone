@@ -17,7 +17,7 @@ struct ChatBubble: View {
                 UserBubble(color: message.user.color, content: message.content, timeStamp: message.timeStamp)
                     .padding(.leading, 40)
                     .padding(.trailing, 10)
-        }
+            }
         }
         else {
             VStack(alignment: .leading, spacing: 0) {
@@ -38,11 +38,11 @@ struct UserBubble: View {
     var body: some View {
         VStack(alignment: .trailing, spacing: 0) {
             Text(content)
-            .fontWeight(.bold)
-            .padding(10)
-            .background(color)
-            .foregroundColor(.white)
-            .cornerRadius(18, corners: [.topLeft, .topRight, .bottomLeft])
+                .fontWeight(.bold)
+                .padding(10)
+                .background(color)
+                .foregroundColor(.white)
+                .cornerRadius(18, corners: [.topLeft, .topRight, .bottomLeft])
             if toggleTime {
                 HStack(spacing: 0) {
                     Text("You")
@@ -73,11 +73,15 @@ struct NotUserBubble: View {
         VStack(alignment: .leading, spacing: 0) {
             
             Text(content)
-            .fontWeight(.bold)
-            .padding(10)
-            .background(color)
-            .foregroundColor(.white)
-            .cornerRadius(18, corners: [.bottomLeft, .topRight, .bottomRight])
+                .fontWeight(.bold)
+                .padding(10)
+                .background(color)
+                .foregroundColor(.white)
+                .cornerRadius(18, corners: [.bottomLeft, .topRight, .bottomRight])
+                .lineLimit(nil)
+                .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                
+                .frame(width: UIScreen.main.bounds.size.width - 50, alignment: .leading)
             if toggleTime {
                 HStack(spacing: 0) {
                     Text(username)
@@ -100,7 +104,7 @@ struct NotUserBubble: View {
 
 struct ChatBubble_Previews: PreviewProvider {
     static var previews: some View {
-        ChatBubble(message: Message(content: "Hi! You have won a jackpot of $40,000! Send your bank account and password to claim it now!",  user: you, isMe: true, timeStamp: "23:43"))
+        ChatBubble(message: Message(content: "Hi! You have won a jackpot of $40,000! Send your bank account and password to claim it now!",  user: you, isMe: false, timeStamp: "23:43"))
     }
 }
 
