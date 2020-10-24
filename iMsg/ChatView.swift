@@ -60,6 +60,7 @@ struct SendMessageTextField: View {
         HStack {
             TextField("Enter Message", text: $currentMessageContent)
                 .disableAutocorrection(true)
+                .padding(15)
             
             
             Button(action: {
@@ -68,13 +69,13 @@ struct SendMessageTextField: View {
                     currentMessageContent=""
                 }
             }){
-                Text("Send")
-                    .foregroundColor(Color.blue)
+                Image("SendButton")
+                    .resizable()
+                    .frame(width:35, height:35)
+                    .padding(.trailing, 5)
             }
-            .padding(5)
 
         }
-        .padding(8)
         .foregroundColor(Color.gray)
         .overlay(RoundedRectangle(cornerRadius: 50)
                     .stroke(Color.gray, lineWidth: 1)
