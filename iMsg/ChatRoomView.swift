@@ -18,7 +18,7 @@ struct ChatRoomView: View {
     @State var chatRoom: ChatRoom = ChatRoom(chatRoomTitle: "No title")
     
     var body: some View {
-        NavigationLink(destination: ChatView(chatRoomTitle: chatRoom.chatRoomTitle)) {
+        NavigationLink(destination: ChatView(chatRoomTitle: chatRoom.chatRoomTitle).navigationBarTitle(chatRoom.chatRoomTitle, displayMode: .inline)) {
             VStack {
                 Text(chatRoom.chatRoomTitle)
                     .padding(5)

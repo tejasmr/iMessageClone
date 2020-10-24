@@ -2,10 +2,11 @@
 //  ContentView.swift
 //  iMsg
 //
-//  Created by Tejas M R on 19/10/20.
+//  Created by Tejas M R on 19/10/20
 //
 
 import SwiftUI
+import UIKit
 
 var chatRooms = [
     ChatRoom(chatRoomTitle: "May"),
@@ -22,7 +23,7 @@ struct ContentView: View {
                     ChatRoomView(chatRoom: chatRoom)
                 }
             }
-            .navigationBarTitle("Main")
+            .navigationBarTitle("iMsg", displayMode: .inline)
         }
     }
 }

@@ -58,6 +58,7 @@ struct UserBubble: View {
                 self.toggleTime.toggle()
             }
         })
+        .shadow(radius: 4)
     }
 }
 
@@ -98,13 +99,14 @@ struct NotUserBubble: View {
                 self.toggleTime.toggle()
             }
         })
+        .shadow(radius: 4)
         
     }
 }
 
 struct ChatBubble_Previews: PreviewProvider {
     static var previews: some View {
-        ChatBubble(message: Message(content: "Hi! You have won a jackpot of $40,000! Send your bank account and password to claim it now!",  user: you, isMe: false, timeStamp: "23:43"))
+        ChatBubble(message: Message(content: "Hi! You have won a jackpot of $40,000! Send your bank account and password to claim it now!",  user: you, isMe: true, timeStamp: "23:43"))
     }
 }
 
