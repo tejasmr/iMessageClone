@@ -11,6 +11,13 @@
 		7B076DCD2545996F008251F5 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DCC2545996F008251F5 /* SideBarView.swift */; };
 		7B076DDB2545B284008251F5 /* KeyboardAwareModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DD92545B283008251F5 /* KeyboardAwareModifier.swift */; };
 		7B076DDC2545B284008251F5 /* HalfModalView_v3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DDA2545B284008251F5 /* HalfModalView_v3.swift */; };
+		7B076DE42545CB2A008251F5 /* SideBarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DE32545CB2A008251F5 /* SideBarRow.swift */; };
+		7B076DE92545CB62008251F5 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DE82545CB62008251F5 /* UserList.swift */; };
+		7B076DEE2545CBA7008251F5 /* NewContactButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DED2545CBA7008251F5 /* NewContactButton.swift */; };
+		7B076DF32545CBD9008251F5 /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DF22545CBD9008251F5 /* Chats.swift */; };
+		7B076DF82545CC21008251F5 /* SendMessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DF72545CC21008251F5 /* SendMessageTextField.swift */; };
+		7B076DFD2545CC54008251F5 /* UserBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DFC2545CC54008251F5 /* UserBubble.swift */; };
+		7B076E022545CC74008251F5 /* NotUserBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076E012545CC74008251F5 /* NotUserBubble.swift */; };
 		7B1804E82541C6BC001DBA2B /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */; };
 		7B27945D254558CC00026C2E /* NewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27945C254558CC00026C2E /* NewContactView.swift */; };
 		7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3168E0253DD9C800640989 /* iMsgApp.swift */; };
@@ -47,6 +54,13 @@
 		7B076DCC2545996F008251F5 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		7B076DD92545B283008251F5 /* KeyboardAwareModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAwareModifier.swift; sourceTree = "<group>"; };
 		7B076DDA2545B284008251F5 /* HalfModalView_v3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalView_v3.swift; sourceTree = "<group>"; };
+		7B076DE32545CB2A008251F5 /* SideBarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarRow.swift; sourceTree = "<group>"; };
+		7B076DE82545CB62008251F5 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
+		7B076DED2545CBA7008251F5 /* NewContactButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactButton.swift; sourceTree = "<group>"; };
+		7B076DF22545CBD9008251F5 /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
+		7B076DF72545CC21008251F5 /* SendMessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageTextField.swift; sourceTree = "<group>"; };
+		7B076DFC2545CC54008251F5 /* UserBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBubble.swift; sourceTree = "<group>"; };
+		7B076E012545CC74008251F5 /* NotUserBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotUserBubble.swift; sourceTree = "<group>"; };
 		7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
 		7B27945C254558CC00026C2E /* NewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactView.swift; sourceTree = "<group>"; };
 		7B3168DD253DD9C800640989 /* iMsg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMsg.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +144,13 @@
 				7B3168E4253DD9CB00640989 /* Assets.xcassets */,
 				7B3168E9253DD9CB00640989 /* Info.plist */,
 				7B3168E6253DD9CB00640989 /* Preview Content */,
+				7B076DE32545CB2A008251F5 /* SideBarRow.swift */,
+				7B076DE82545CB62008251F5 /* UserList.swift */,
+				7B076DED2545CBA7008251F5 /* NewContactButton.swift */,
+				7B076DF22545CBD9008251F5 /* Chats.swift */,
+				7B076DF72545CC21008251F5 /* SendMessageTextField.swift */,
+				7B076DFC2545CC54008251F5 /* UserBubble.swift */,
+				7B076E012545CC74008251F5 /* NotUserBubble.swift */,
 			);
 			path = iMsg;
 			sourceTree = "<group>";
@@ -291,6 +312,7 @@
 			files = (
 				7B27945D254558CC00026C2E /* NewContactView.swift in Sources */,
 				7B076DC825459788008251F5 /* MainView.swift in Sources */,
+				7B076DFD2545CC54008251F5 /* UserBubble.swift in Sources */,
 				7B351D2B254486FE00414442 /* Structs.swift in Sources */,
 				7B3168E3253DD9C800640989 /* ContentView.swift in Sources */,
 				7B076DCD2545996F008251F5 /* SideBarView.swift in Sources */,
@@ -298,8 +320,14 @@
 				7B076DDC2545B284008251F5 /* HalfModalView_v3.swift in Sources */,
 				7B351D26254485B300414442 /* Lists.swift in Sources */,
 				7B31690F253DDC4E00640989 /* ChatView.swift in Sources */,
+				7B076DF32545CBD9008251F5 /* Chats.swift in Sources */,
+				7B076DEE2545CBA7008251F5 /* NewContactButton.swift in Sources */,
+				7B076DF82545CC21008251F5 /* SendMessageTextField.swift in Sources */,
+				7B076E022545CC74008251F5 /* NotUserBubble.swift in Sources */,
 				7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */,
+				7B076DE42545CB2A008251F5 /* SideBarRow.swift in Sources */,
 				7B076DDB2545B284008251F5 /* KeyboardAwareModifier.swift in Sources */,
+				7B076DE92545CB62008251F5 /* UserList.swift in Sources */,
 				7B316914253DDC9000640989 /* ChatBubble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

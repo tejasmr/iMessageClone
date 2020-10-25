@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  Chats.swift
 //  iMsg
 //
 //  Created by Tejas M R on 25/10/20.
@@ -7,15 +7,22 @@
 
 import SwiftUI
 
-struct MainView: View {
-    @State var showingNewContact = false
-    @State var showingSidebar = false
+struct Chats: View {
+    @State var showingNewContactView = false
     @EnvironmentObject var users: Users
     
     var body: some View {
-        VStack {
-            UserList()
-            NewContactButton()
+        ZStack {
+            if self.users.showingSidebar {
+                VStack(alignment: .leading) {
+                    withAnimation {
+                        SideBarView()
+                    }
+                }
+            }
+            else {
+                MainView()
+            }
         }
         .navigationBarItems(leading: Button(action: {
             self.users.showingSidebar.toggle()
@@ -24,19 +31,17 @@ struct MainView: View {
                 .resizable()
                 .frame(width: 25, height: 18)
                 .foregroundColor(Color.white)
+            
         })
         .navigationBarTitle("Chats", displayMode: .inline)
         .background(NavigationConfigurator { nc in
             nc.navigationBar.barTintColor = UIColor(Color.green)
         })
-        
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct Chats_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
-            .environmentObject(Users())
+        Chats()
     }
 }
-
