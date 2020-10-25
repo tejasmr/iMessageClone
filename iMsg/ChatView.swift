@@ -7,48 +7,25 @@
 
 import SwiftUI
 
-struct User: Hashable {
-    var color: Color = Color.blue
-    var name: String = "anon"
-}
-
-var may = User(color: .red, name: "may")
-var you = User(color: .purple, name: "tezz")
-
-
-struct Message: Hashable {
-    var content: String = ""
-    var user = User(color: Color.blue, name: "anon")
-    var isMe: Bool = true
-    var timeStamp = "23:43"
-}
 
 struct ChatView: View {
     @State var currentMessageContent: String = ""
-    @State var chatRoomTitle: String = "No title"
-    
-    @State var messages: [Message] = [
-        Message(content: "Hello anon", user: you, isMe: true, timeStamp: "09:34"),
-        Message(content: "Hello tezz", user: may, isMe: false, timeStamp: "16:41"),
-        Message(content: "How are you?", user: you, isMe: true, timeStamp: "16:41"),
-        Message(content: "I have corona virus, Send me $3000 right now and god will bless you!", user: may, isMe: false, timeStamp: "16:41"),
-        Message(content: "Hello anon", user: you, isMe: true, timeStamp: "09:34"),
-        Message(content: "Hello tezz", user: may, isMe: false, timeStamp: "16:41"),
-        Message(content: "How are you?", user: you, isMe: true, timeStamp: "16:41"),
-        Message(content: "I have corona virus, Send me $3000 right now and god will bless you!", user: may, isMe: false, timeStamp: "16:41")
-    ]
+    @State var user: User = User(color: Color.blue, name: "None")
+    @State var messages = chatMessages
         
     var body: some View {
         VStack(spacing: 0) {
             ScrollView {
                 ForEach(messages, id: \.self) { message in
-                    ChatBubble(message: message)
+                    ChatBubble(message: message, user: user)
                 }.flip()
             }
             .flip()
             SendMessageTextField(currentMessageContent: $currentMessageContent, messages: $messages)
                 .frame(alignment: .center)
-                .padding(5)        }
+                .padding(5)
+            
+        }
     }
 }
 
@@ -65,7 +42,7 @@ struct SendMessageTextField: View {
             
             Button(action: {
                 if (currentMessageContent != "") {
-                    messages.append(Message(content: currentMessageContent,user: you, isMe: true, timeStamp: "23:44"))
+                    messages.append(Message(content: currentMessageContent, isMe: true, timeStamp: "23:44"))
                     currentMessageContent=""
                 }
             }){

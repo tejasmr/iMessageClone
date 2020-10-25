@@ -7,23 +7,26 @@
 
 import SwiftUI
 
-struct ChatRoom: Hashable {
-    var chatRoomTitle: String = "null"
-    var messages: [Message] = []
-}
-
 
 
 struct ChatRoomView: View {
-    @State var chatRoom: ChatRoom = ChatRoom(chatRoomTitle: "No title")
+    @State var user: User = User(color: Color.blue, name: "None")
     
     var body: some View {
-        NavigationLink(destination: ChatView(chatRoomTitle: chatRoom.chatRoomTitle).navigationBarTitle(chatRoom.chatRoomTitle, displayMode: .inline)) {
-            VStack {
-                Text(chatRoom.chatRoomTitle)
+        NavigationLink(destination: ChatView(user: user).navigationBarTitle(user.name, displayMode: .inline)) {
+            HStack {
+                Text(user.name)
+                    .fontWeight(.bold)
                     .padding(5)
-                    .frame(width: UIScreen.main.bounds.size.width - 20, alignment: .leading)
+                    .foregroundColor(.black)
+                    .background(Color.white)
+                Spacer()
+                Image("GoArrow")
+                    .resizable()
+                    .frame(width: 20, height: 20)
             }
+            
+            .frame(width: UIScreen.main.bounds.size.width - 20, alignment: .leading)
         }
     }
 }

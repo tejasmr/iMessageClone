@@ -11,7 +11,13 @@ import SwiftUI
 struct iMsgApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(Users())
         }
+    }
+}
+
+struct iMsgApp_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView().environmentObject(Users())
     }
 }

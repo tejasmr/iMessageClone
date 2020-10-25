@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B1804E82541C6BC001DBA2B /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */; };
+		7B27945D254558CC00026C2E /* NewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27945C254558CC00026C2E /* NewContactView.swift */; };
 		7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3168E0253DD9C800640989 /* iMsgApp.swift */; };
 		7B3168E3253DD9C800640989 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3168E2253DD9C800640989 /* ContentView.swift */; };
 		7B3168E5253DD9CB00640989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3168E4253DD9CB00640989 /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 		7B3168FE253DD9CB00640989 /* iMsgUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3168FD253DD9CB00640989 /* iMsgUITests.swift */; };
 		7B31690F253DDC4E00640989 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B31690E253DDC4E00640989 /* ChatView.swift */; };
 		7B316914253DDC9000640989 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B316913253DDC9000640989 /* ChatBubble.swift */; };
+		7B351D26254485B300414442 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B351D25254485B300414442 /* Lists.swift */; };
+		7B351D2B254486FE00414442 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B351D2A254486FE00414442 /* Structs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
+		7B27945C254558CC00026C2E /* NewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactView.swift; sourceTree = "<group>"; };
 		7B3168DD253DD9C800640989 /* iMsg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMsg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3168E0253DD9C800640989 /* iMsgApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMsgApp.swift; sourceTree = "<group>"; };
 		7B3168E2253DD9C800640989 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		7B3168FF253DD9CB00640989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B31690E253DDC4E00640989 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		7B316913253DDC9000640989 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		7B351D25254485B300414442 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		7B351D2A254486FE00414442 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +108,13 @@
 			isa = PBXGroup;
 			children = (
 				7B3168E0253DD9C800640989 /* iMsgApp.swift */,
-				7B3168E2253DD9C800640989 /* ContentView.swift */,
+				7B316913253DDC9000640989 /* ChatBubble.swift */,
 				7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */,
 				7B31690E253DDC4E00640989 /* ChatView.swift */,
-				7B316913253DDC9000640989 /* ChatBubble.swift */,
+				7B3168E2253DD9C800640989 /* ContentView.swift */,
+				7B27945C254558CC00026C2E /* NewContactView.swift */,
+				7B351D25254485B300414442 /* Lists.swift */,
+				7B351D2A254486FE00414442 /* Structs.swift */,
 				7B3168E4253DD9CB00640989 /* Assets.xcassets */,
 				7B3168E9253DD9CB00640989 /* Info.plist */,
 				7B3168E6253DD9CB00640989 /* Preview Content */,
@@ -268,8 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B27945D254558CC00026C2E /* NewContactView.swift in Sources */,
+				7B351D2B254486FE00414442 /* Structs.swift in Sources */,
 				7B3168E3253DD9C800640989 /* ContentView.swift in Sources */,
 				7B1804E82541C6BC001DBA2B /* ChatRoomView.swift in Sources */,
+				7B351D26254485B300414442 /* Lists.swift in Sources */,
 				7B31690F253DDC4E00640989 /* ChatView.swift in Sources */,
 				7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */,
 				7B316914253DDC9000640989 /* ChatBubble.swift in Sources */,
