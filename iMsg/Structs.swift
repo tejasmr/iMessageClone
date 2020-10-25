@@ -16,8 +16,11 @@ struct User: Hashable {
 class Users: ObservableObject {
     
     @Published var list: [User]
-    
+    @Published var showingSidebar: Bool
+    @Published var showingNewContact: Bool
     init() {
+        showingSidebar = false
+        showingNewContact = false
         self.list = [
             User(color: Color.blue, name: "May"),
             User(color: Color.red, name: "Tezz")

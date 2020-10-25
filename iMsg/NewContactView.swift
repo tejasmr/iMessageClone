@@ -40,14 +40,19 @@ struct NewContactView: View {
                     }
                 }
                 .background(Color.white)
-                .frame(width: UIScreen.main.bounds.size.width - 100, height: UIScreen.main.bounds.size.height - 350)
+                .frame(width: UIScreen.main.bounds.width - 100)
+                .frame(maxHeight: 240)
             }
             else {
-                VStack {
-                    
+                VStack(spacing: 0) {
+                    Rectangle()
+                        .frame(width: 60, height: 6)
+                        .opacity(0.4)
+                        .cornerRadius(5)
                     VStack {
                         Text("New Contact")
                             .font(.headline)
+                            .padding(.top)
                         
                         HStack {
                             Text("Name:")
@@ -83,8 +88,10 @@ struct NewContactView: View {
                     
                     HStack(spacing: 0) {
                         Button(action: {
-                            self.users.list.append(User(color: usercolor, name: username))
-                            self.presentationMode.wrappedValue.dismiss()
+                            if username != "" {
+                                self.users.list.append(User(color: usercolor, name: username))
+                                self.users.showingNewContact.toggle()
+                            }
                             
                         }) {
                             Image("NewContact")
@@ -93,7 +100,7 @@ struct NewContactView: View {
                         }
                         
                         Button(action: {
-                            self.presentationMode.wrappedValue.dismiss()
+                            self.users.showingNewContact.toggle()
                         }) {
                             Image("Cancel")
                                 .resizable()
@@ -103,6 +110,8 @@ struct NewContactView: View {
                 }
             }
         }
+        .frame(height: 270)
+        .cornerRadius(30)
     }
 }
 
@@ -113,3 +122,5 @@ struct NewContactView_Previews: PreviewProvider {
         NewContactView()
     }
 }
+
+

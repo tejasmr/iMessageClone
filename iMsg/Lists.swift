@@ -7,13 +7,7 @@
 
 import Foundation
 import SwiftUI
-
-
-//var chatRooms: [ChatRoom] = [
-//    ChatRoom(chatRoomTitle: "May"),
-//    ChatRoom(chatRoomTitle: "Happy"),
-//    ChatRoom(chatRoomTitle: "Ram"),
-//]
+ 
 
 
 var chatColors: [ChatColor] = [
