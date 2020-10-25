@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  MyProfileView.swift
 //  iMsg
 //
 //  Created by Tejas M R on 25/10/20.
@@ -7,15 +7,21 @@
 
 import SwiftUI
 
-struct MainView: View {
-    @State var showingNewContact = false
-    @State var showingSidebar = false
+struct MyProfileView: View {
     @EnvironmentObject var users: Users
     
     var body: some View {
         VStack {
-            UserList()
-            NewContactButton()
+            if self.users.showingSidebar {
+                VStack(alignment: .leading) {
+                    withAnimation {
+                        SideBarView()
+                    }
+                }
+            }
+            else {
+                Text("My Profile View")
+            }
         }
         .navigationBarItems(leading: Button(action: {
             self.users.showingSidebar.toggle()
@@ -33,10 +39,8 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct MyProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
-            .environmentObject(Users())
+        MyProfileView().environmentObject(Users())
     }
 }
-

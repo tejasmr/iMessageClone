@@ -35,13 +35,13 @@ struct Chats: View {
         })
         .navigationBarTitle("Chats", displayMode: .inline)
         .background(NavigationConfigurator { nc in
-            nc.navigationBar.barTintColor = UIColor(Color.green)
+            nc.navigationBar.barTintColor = UIColor(Color.black)
         })
     }
 }
 
 struct Chats_Previews: PreviewProvider {
     static var previews: some View {
-        Chats()
+        Chats().environmentObject(Users())
     }
 }

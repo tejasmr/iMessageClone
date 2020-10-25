@@ -21,8 +21,8 @@ struct NewContactButton: View {
                     if !users.showingNewContact {
                         Image(systemName: "person.badge.plus")
                             .resizable()
-                            .frame(width: 35, height: 35)
-                            .padding(20)
+                            .frame(width: 30, height: 30)
+                            .padding(10)
                             .foregroundColor(Color.white)
                             .background(Color.blue)
                             .clipShape(Circle())

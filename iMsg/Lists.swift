@@ -13,7 +13,13 @@ import SwiftUI
 var chatColors: [ChatColor] = [
     ChatColor(color: Color.blue, colorName: "Blue"),
     ChatColor(color: Color.red, colorName: "Red"),
+    ChatColor(color: Color.black, colorName: "Black"),
+    ChatColor(color: Color.orange, colorName: "Orange"),
+    ChatColor(color: Color.gray, colorName: "Gray"),
+    ChatColor(color: Color.yellow, colorName: "Yellow"),
+    ChatColor(color: Color.purple, colorName: "Purple"),
     ChatColor(color: Color.green, colorName: "Green")
+    
 ]
 
 

@@ -14,7 +14,30 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Chats()
+            if self.users.showingMyProfileView {
+                VStack(alignment: .leading) {
+                    withAnimation {
+                        MyProfileView()
+                    }
+                }
+            }
+            else if self.users.showingChats {
+                VStack(alignment: .leading) {
+                    withAnimation {
+                        Chats()
+                    }
+                }
+            }
+            else if self.users.showingGroups {
+                VStack(alignment: .leading) {
+                    withAnimation {
+                        Groups()
+                    }
+                }
+            }
+            else {
+                Chats()
+            }
         }.environmentObject(users)
     }
 }

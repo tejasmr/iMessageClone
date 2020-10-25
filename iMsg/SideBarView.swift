@@ -13,13 +13,45 @@ struct SideBarView: View {
     var body: some View {
         VStack {
             VStack(alignment: .center, spacing: 2) {
-                SideBarRow(image: "person.crop.circle", text: "My Profile")
+                Button(
+                    action: {
+                        self.users.showingMyProfileView.toggle()
+                        
+                        self.users.showingSidebar = false
+                        self.users.showingNewContact = false
+                        self.users.showingChats = false
+                        self.users.showingGroups = false
+                    }) {
+                    SideBarRow(image: "person.crop.circle", text: "My Profile")
+                }
                 Divider()
                     .padding(.horizontal, 20)
-                SideBarRow(image: "message", text: "Chats")
+                Button(
+                    action: {
+                        self.users.showingChats.toggle()
+                        
+                        self.users.showingSidebar = false
+                        self.users.showingNewContact = false
+                        self.users.showingMyProfileView = false
+                        self.users.showingGroups = false
+                    }
+                ) {
+                    SideBarRow(image: "message", text: "Chats")
+                }
                 Divider()
                     .padding(.horizontal, 20)
-                SideBarRow(image: "rectangle.stack.person.crop", text: "Groups")
+                Button(
+                    action: {
+                        self.users.showingGroups.toggle()
+                        
+                        self.users.showingSidebar = false
+                        self.users.showingNewContact = false
+                        self.users.showingMyProfileView = false
+                        self.users.showingChats = false
+                    }
+                ) {
+                    SideBarRow(image: "rectangle.stack.person.crop", text: "Groups")
+                }
                 Divider()
                     .padding(.horizontal, 20)
                 
@@ -34,14 +66,14 @@ struct SideBarView: View {
             }
             .frame(width: UIScreen.main.bounds.size.width - 100, alignment: .center)
             .background(Color.gray.opacity(0.2))
+            
         }
         .padding(.trailing, 100)
-        
     }
 }
 
 struct SideBarView_Previews: PreviewProvider {
     static var previews: some View {
-        SideBarView()
+        SideBarView().environmentObject(Users())
     }
 }

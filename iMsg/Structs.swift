@@ -18,12 +18,33 @@ class Users: ObservableObject {
     @Published var list: [User]
     @Published var showingSidebar: Bool
     @Published var showingNewContact: Bool
+    @Published var showingMyProfileView: Bool
+    @Published var showingChats: Bool
+    @Published var showingGroups: Bool
+    
     init() {
         showingSidebar = false
         showingNewContact = false
+        showingMyProfileView = false
+        showingChats = false
+        showingGroups = false
         self.list = [
-            User(color: Color.blue, name: "May"),
-            User(color: Color.red, name: "Tezz")
+            User(color: Color.blue, name: "Blue"),
+            User(color: Color.red, name: "Red"),
+            User(color: Color.black, name: "Black"),
+            User(color: Color.orange, name: "Orange"),
+            User(color: Color.gray, name: "Gray"),
+            User(color: Color.yellow, name: "Yellow"),
+            User(color: Color.purple, name: "Purple"),
+            User(color: Color.green, name: "Green"),
+            User(color: Color.blue, name: "Blue"),
+            User(color: Color.red, name: "Red"),
+            User(color: Color.black, name: "Black"),
+            User(color: Color.orange, name: "Orange"),
+            User(color: Color.gray, name: "Gray"),
+            User(color: Color.yellow, name: "Yellow"),
+            User(color: Color.purple, name: "Purple"),
+            User(color: Color.green, name: "Green")
         ]
     }
 }
