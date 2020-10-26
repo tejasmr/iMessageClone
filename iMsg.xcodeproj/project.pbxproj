@@ -13,7 +13,7 @@
 		7B076DDC2545B284008251F5 /* HalfModalView_v3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DDA2545B284008251F5 /* HalfModalView_v3.swift */; };
 		7B076DE42545CB2A008251F5 /* SideBarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DE32545CB2A008251F5 /* SideBarRow.swift */; };
 		7B076DE92545CB62008251F5 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DE82545CB62008251F5 /* UserList.swift */; };
-		7B076DEE2545CBA7008251F5 /* NewContactButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DED2545CBA7008251F5 /* NewContactButton.swift */; };
+		7B076DEE2545CBA7008251F5 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DED2545CBA7008251F5 /* BottomBar.swift */; };
 		7B076DF32545CBD9008251F5 /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DF22545CBD9008251F5 /* Chats.swift */; };
 		7B076DF82545CC21008251F5 /* SendMessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DF72545CC21008251F5 /* SendMessageTextField.swift */; };
 		7B076DFD2545CC54008251F5 /* UserBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DFC2545CC54008251F5 /* UserBubble.swift */; };
@@ -21,6 +21,8 @@
 		7B076E072545DD25008251F5 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076E062545DD25008251F5 /* MyProfileView.swift */; };
 		7B076E0C2545E471008251F5 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076E0B2545E471008251F5 /* Groups.swift */; };
 		7B1804E82541C6BC001DBA2B /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */; };
+		7B2624012547070F00E3435E /* BottomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2624002547070F00E3435E /* BottomBarItem.swift */; };
+		7B26240625470C1F00E3435E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26240525470C1F00E3435E /* SettingsView.swift */; };
 		7B27945D254558CC00026C2E /* NewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27945C254558CC00026C2E /* NewContactView.swift */; };
 		7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3168E0253DD9C800640989 /* iMsgApp.swift */; };
 		7B3168E3253DD9C800640989 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3168E2253DD9C800640989 /* ContentView.swift */; };
@@ -58,7 +60,7 @@
 		7B076DDA2545B284008251F5 /* HalfModalView_v3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalView_v3.swift; sourceTree = "<group>"; };
 		7B076DE32545CB2A008251F5 /* SideBarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarRow.swift; sourceTree = "<group>"; };
 		7B076DE82545CB62008251F5 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
-		7B076DED2545CBA7008251F5 /* NewContactButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactButton.swift; sourceTree = "<group>"; };
+		7B076DED2545CBA7008251F5 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		7B076DF22545CBD9008251F5 /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
 		7B076DF72545CC21008251F5 /* SendMessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageTextField.swift; sourceTree = "<group>"; };
 		7B076DFC2545CC54008251F5 /* UserBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBubble.swift; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		7B076E062545DD25008251F5 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		7B076E0B2545E471008251F5 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
+		7B2624002547070F00E3435E /* BottomBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarItem.swift; sourceTree = "<group>"; };
+		7B26240525470C1F00E3435E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7B27945C254558CC00026C2E /* NewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactView.swift; sourceTree = "<group>"; };
 		7B3168DD253DD9C800640989 /* iMsg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMsg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3168E0253DD9C800640989 /* iMsgApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMsgApp.swift; sourceTree = "<group>"; };
@@ -110,6 +114,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B26240D2547110200E3435E /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				7B27945C254558CC00026C2E /* NewContactView.swift */,
+				7B26240525470C1F00E3435E /* SettingsView.swift */,
+				7B076E062545DD25008251F5 /* MyProfileView.swift */,
+				7B076DF22545CBD9008251F5 /* Chats.swift */,
+				7B076E0B2545E471008251F5 /* Groups.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		7B26240E254711D800E3435E /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				7B076DFC2545CC54008251F5 /* UserBubble.swift */,
+				7B076E012545CC74008251F5 /* NotUserBubble.swift */,
+				7B316913253DDC9000640989 /* ChatBubble.swift */,
+				7B076DF72545CC21008251F5 /* SendMessageTextField.swift */,
+				7B31690E253DDC4E00640989 /* ChatView.swift */,
+				7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */,
+				7B076DE82545CB62008251F5 /* UserList.swift */,
+				7B076DC725459788008251F5 /* MainView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		7B26240F2547125200E3435E /* HelperCode */ = {
+			isa = PBXGroup;
+			children = (
+				7B076DDA2545B284008251F5 /* HalfModalView_v3.swift */,
+				7B076DD92545B283008251F5 /* KeyboardAwareModifier.swift */,
+			);
+			path = HelperCode;
+			sourceTree = "<group>";
+		};
+		7B2624102547127500E3435E /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				7B076DE32545CB2A008251F5 /* SideBarRow.swift */,
+				7B076DCC2545996F008251F5 /* SideBarView.swift */,
+			);
+			path = SideBar;
+			sourceTree = "<group>";
+		};
+		7B262414254712AA00E3435E /* Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				7B351D25254485B300414442 /* Lists.swift */,
+				7B351D2A254486FE00414442 /* Structs.swift */,
+			);
+			path = Definitions;
+			sourceTree = "<group>";
+		};
+		7B262415254712D200E3435E /* BottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				7B076DED2545CBA7008251F5 /* BottomBar.swift */,
+				7B2624002547070F00E3435E /* BottomBarItem.swift */,
+			);
+			path = BottomBar;
+			sourceTree = "<group>";
+		};
 		7B3168D4253DD9C800640989 = {
 			isa = PBXGroup;
 			children = (
@@ -133,30 +200,17 @@
 		7B3168DF253DD9C800640989 /* iMsg */ = {
 			isa = PBXGroup;
 			children = (
+				7B26240D2547110200E3435E /* MainViews */,
+				7B262414254712AA00E3435E /* Definitions */,
+				7B26240E254711D800E3435E /* Chat */,
+				7B262415254712D200E3435E /* BottomBar */,
+				7B2624102547127500E3435E /* SideBar */,
+				7B26240F2547125200E3435E /* HelperCode */,
 				7B3168E0253DD9C800640989 /* iMsgApp.swift */,
-				7B316913253DDC9000640989 /* ChatBubble.swift */,
-				7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */,
-				7B31690E253DDC4E00640989 /* ChatView.swift */,
 				7B3168E2253DD9C800640989 /* ContentView.swift */,
-				7B076DDA2545B284008251F5 /* HalfModalView_v3.swift */,
-				7B076DD92545B283008251F5 /* KeyboardAwareModifier.swift */,
-				7B076DC725459788008251F5 /* MainView.swift */,
-				7B27945C254558CC00026C2E /* NewContactView.swift */,
-				7B076DCC2545996F008251F5 /* SideBarView.swift */,
-				7B351D25254485B300414442 /* Lists.swift */,
-				7B351D2A254486FE00414442 /* Structs.swift */,
 				7B3168E4253DD9CB00640989 /* Assets.xcassets */,
 				7B3168E9253DD9CB00640989 /* Info.plist */,
 				7B3168E6253DD9CB00640989 /* Preview Content */,
-				7B076DE32545CB2A008251F5 /* SideBarRow.swift */,
-				7B076DE82545CB62008251F5 /* UserList.swift */,
-				7B076DED2545CBA7008251F5 /* NewContactButton.swift */,
-				7B076DF22545CBD9008251F5 /* Chats.swift */,
-				7B076DF72545CC21008251F5 /* SendMessageTextField.swift */,
-				7B076DFC2545CC54008251F5 /* UserBubble.swift */,
-				7B076E012545CC74008251F5 /* NotUserBubble.swift */,
-				7B076E062545DD25008251F5 /* MyProfileView.swift */,
-				7B076E0B2545E471008251F5 /* Groups.swift */,
 			);
 			path = iMsg;
 			sourceTree = "<group>";
@@ -317,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B076E072545DD25008251F5 /* MyProfileView.swift in Sources */,
+				7B26240625470C1F00E3435E /* SettingsView.swift in Sources */,
 				7B27945D254558CC00026C2E /* NewContactView.swift in Sources */,
 				7B076DC825459788008251F5 /* MainView.swift in Sources */,
 				7B076DFD2545CC54008251F5 /* UserBubble.swift in Sources */,
@@ -328,9 +383,10 @@
 				7B351D26254485B300414442 /* Lists.swift in Sources */,
 				7B31690F253DDC4E00640989 /* ChatView.swift in Sources */,
 				7B076DF32545CBD9008251F5 /* Chats.swift in Sources */,
-				7B076DEE2545CBA7008251F5 /* NewContactButton.swift in Sources */,
+				7B076DEE2545CBA7008251F5 /* BottomBar.swift in Sources */,
 				7B076DF82545CC21008251F5 /* SendMessageTextField.swift in Sources */,
 				7B076E022545CC74008251F5 /* NotUserBubble.swift in Sources */,
+				7B2624012547070F00E3435E /* BottomBarItem.swift in Sources */,
 				7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */,
 				7B076DE42545CB2A008251F5 /* SideBarRow.swift in Sources */,
 				7B076DDB2545B284008251F5 /* KeyboardAwareModifier.swift in Sources */,

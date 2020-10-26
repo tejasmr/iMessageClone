@@ -14,29 +14,39 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            if self.users.showingMyProfileView {
-                VStack(alignment: .leading) {
-                    withAnimation {
-                        MyProfileView()
+            VStack {
+                if self.users.showingMyProfileView {
+                    VStack(alignment: .leading) {
+                        withAnimation {
+                            MyProfileView()
+                        }
                     }
                 }
-            }
-            else if self.users.showingChats {
-                VStack(alignment: .leading) {
-                    withAnimation {
-                        Chats()
+                else if self.users.showingChats {
+                    VStack(alignment: .leading) {
+                        withAnimation {
+                            Chats()
+                        }
                     }
                 }
-            }
-            else if self.users.showingGroups {
-                VStack(alignment: .leading) {
-                    withAnimation {
-                        Groups()
+                else if self.users.showingGroups {
+                    VStack(alignment: .leading) {
+                        withAnimation {
+                            Groups()
+                        }
                     }
                 }
-            }
-            else {
-                Chats()
+                else if self.users.showingSettingsView {
+                    VStack(alignment: .leading) {
+                        withAnimation {
+                            SettingsView()
+                        }
+                    }
+                }
+                else {
+                    Chats()
+                }
+                BottomBar()
             }
         }.environmentObject(users)
     }

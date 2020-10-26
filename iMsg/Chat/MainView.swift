@@ -15,7 +15,6 @@ struct MainView: View {
     var body: some View {
         VStack {
             UserList()
-            NewContactButton()
         }
         .navigationBarItems(leading: Button(action: {
             self.users.showingSidebar.toggle()

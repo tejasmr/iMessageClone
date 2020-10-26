@@ -110,8 +110,7 @@ struct NewContactView: View {
                 }
             }
         }
-        .frame(height: 270)
-        .cornerRadius(30)
+        .frame(height: 240)
     }
 }
 

@@ -15,7 +15,7 @@ struct SideBarView: View {
             VStack(alignment: .center, spacing: 2) {
                 Button(
                     action: {
-                        self.users.showingMyProfileView.toggle()
+                        self.users.showingMyProfileView = true
                         
                         self.users.showingSidebar = false
                         self.users.showingNewContact = false
@@ -28,7 +28,7 @@ struct SideBarView: View {
                     .padding(.horizontal, 20)
                 Button(
                     action: {
-                        self.users.showingChats.toggle()
+                        self.users.showingChats = true
                         
                         self.users.showingSidebar = false
                         self.users.showingNewContact = false
@@ -42,7 +42,7 @@ struct SideBarView: View {
                     .padding(.horizontal, 20)
                 Button(
                     action: {
-                        self.users.showingGroups.toggle()
+                        self.users.showingGroups = true
                         
                         self.users.showingSidebar = false
                         self.users.showingNewContact = false
@@ -56,13 +56,6 @@ struct SideBarView: View {
                     .padding(.horizontal, 20)
                 
                 Spacer()
-                Button(action: {
-                    self.users.showingSidebar.toggle()
-                }) {
-                    Image("Cancel")
-                        .resizable()
-                        .frame(width: 70, height: 70)
-                }
             }
             .frame(width: UIScreen.main.bounds.size.width - 100, alignment: .center)
             .background(Color.gray.opacity(0.2))

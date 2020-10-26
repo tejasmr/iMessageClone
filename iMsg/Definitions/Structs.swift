@@ -21,6 +21,7 @@ class Users: ObservableObject {
     @Published var showingMyProfileView: Bool
     @Published var showingChats: Bool
     @Published var showingGroups: Bool
+    @Published var showingSettingsView: Bool
     
     init() {
         showingSidebar = false
@@ -28,6 +29,7 @@ class Users: ObservableObject {
         showingMyProfileView = false
         showingChats = false
         showingGroups = false
+        showingSettingsView = false
         self.list = [
             User(color: Color.blue, name: "Blue"),
             User(color: Color.red, name: "Red"),
