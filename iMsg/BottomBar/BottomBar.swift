@@ -110,12 +110,6 @@ struct BottomBar: View {
             }
             .padding(.vertical, 5)
             .frame(width: UIScreen.main.bounds.size.width, height: 60)
-            if users.showingNewContact {
-                HalfModalView(isShown: $users.showingNewContact) {
-                    NewContactView()
-                }
-                
-            }
         }
         .frame(width: UIScreen.main.bounds.size.width)
     }

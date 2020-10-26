@@ -20,7 +20,11 @@ struct Groups: View {
                 }
             }
             else {
-                Text("Groups")
+                VStack {
+                    Spacer()
+                    Text("Groups")
+                    Spacer()
+                }
             }
         }
         .navigationBarItems(leading: Button(action: {
@@ -31,7 +35,7 @@ struct Groups: View {
                 .frame(width: 25, height: 18)
                 .foregroundColor(Color.white)
         })
-        .navigationBarTitle("Chats", displayMode: .inline)
+        .navigationBarTitle("Groups", displayMode: .inline)
         .background(NavigationConfigurator { nc in
             nc.navigationBar.barTintColor = UIColor(Color.black)
             nc.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]

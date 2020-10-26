@@ -16,11 +16,12 @@ struct SideBarView: View {
                 Button(
                     action: {
                         self.users.showingMyProfileView = true
-                        
+                    
+                        self.users.showingGroups = false
                         self.users.showingSidebar = false
                         self.users.showingNewContact = false
                         self.users.showingChats = false
-                        self.users.showingGroups = false
+                        self.users.showingSettingsView = false
                     }) {
                     SideBarRow(image: "person.crop.circle", text: "My Profile")
                 }
@@ -30,10 +31,11 @@ struct SideBarView: View {
                     action: {
                         self.users.showingChats = true
                         
+                        self.users.showingGroups = false
                         self.users.showingSidebar = false
                         self.users.showingNewContact = false
                         self.users.showingMyProfileView = false
-                        self.users.showingGroups = false
+                        self.users.showingSettingsView = false
                     }
                 ) {
                     SideBarRow(image: "message", text: "Chats")
@@ -48,9 +50,25 @@ struct SideBarView: View {
                         self.users.showingNewContact = false
                         self.users.showingMyProfileView = false
                         self.users.showingChats = false
+                        self.users.showingSettingsView = false
                     }
                 ) {
                     SideBarRow(image: "rectangle.stack.person.crop", text: "Groups")
+                }
+                Divider()
+                    .padding(.horizontal, 20)
+                Button(
+                    action: {
+                        self.users.showingSettingsView = true
+                        
+                        self.users.showingGroups = false
+                        self.users.showingSidebar = false
+                        self.users.showingNewContact = false
+                        self.users.showingMyProfileView = false
+                        self.users.showingChats = false
+                    }
+                ) {
+                    SideBarRow(image: "gear", text: "Settings")
                 }
                 Divider()
                     .padding(.horizontal, 20)

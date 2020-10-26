@@ -46,7 +46,16 @@ struct ContentView: View {
                 else {
                     Chats()
                 }
-                BottomBar()
+                if users.showingNewContact {
+                    HalfModalView(isShown: $users.showingNewContact) {
+                        NewContactView()
+                    }
+                    
+                }
+                else {
+                    BottomBar()
+                }
+                
             }
         }.environmentObject(users)
     }

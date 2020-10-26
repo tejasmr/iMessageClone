@@ -19,7 +19,24 @@ struct SettingsView: View {
             }
         }
         else {
-            Text("Groups")
+            VStack {
+                Spacer()
+                Text("Settings View")
+                Spacer()
+            }
+            .navigationBarItems(leading: Button(action: {
+                self.users.showingSidebar.toggle()
+            }) {
+                Image(systemName: "line.horizontal.3")
+                    .resizable()
+                    .frame(width: 25, height: 18)
+                    .foregroundColor(Color.white)
+            })
+            .navigationBarTitle("Settings", displayMode: .inline)
+            .background(NavigationConfigurator { nc in
+                nc.navigationBar.barTintColor = UIColor(Color.black)
+                nc.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            })
         }
     }
 }

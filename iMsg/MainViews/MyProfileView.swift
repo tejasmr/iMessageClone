@@ -20,7 +20,11 @@ struct MyProfileView: View {
                 }
             }
             else {
-                Text("My Profile View")
+                VStack {
+                    Spacer()
+                    Text("My Profile View")
+                    Spacer()
+                }
             }
         }
         .navigationBarItems(leading: Button(action: {
@@ -31,7 +35,7 @@ struct MyProfileView: View {
                 .frame(width: 25, height: 18)
                 .foregroundColor(Color.white)
         })
-        .navigationBarTitle("Chats", displayMode: .inline)
+        .navigationBarTitle("My Profile", displayMode: .inline)
         .background(NavigationConfigurator { nc in
             nc.navigationBar.barTintColor = UIColor(Color.black)
             nc.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]

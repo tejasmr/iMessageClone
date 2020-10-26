@@ -26,7 +26,7 @@ struct HalfModalView<Content: View> : View {
         }
     }
     
-    var modalHeight:CGFloat = 400
+    var modalHeight:CGFloat = 240
     
     
     var content: () -> Content
@@ -36,27 +36,10 @@ struct HalfModalView<Content: View> : View {
                 state = .dragging(translation: drag.translation)
         }
         .onEnded(onDragEnded)
-        return Group {
-            ZStack {
-                //Background
-                Spacer()
-                    .animation(.interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
-		.gesture(
-                        TapGesture()
-                            .onEnded { _ in
-                                UIApplication.shared.endEditing()
-                                self.isShown = false
-                        }
-                )
-                
+        return ZStack {
                 //Foreground
                 VStack{
-                    Spacer()
                     ZStack{
-                        color.opacity(1.0)
-                            .frame(width: UIScreen.main.bounds.size.width, height:modalHeight)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
                         self.content()
                             .frame(width: UIScreen.main.bounds.size.width, height:modalHeight)
                             .clipped()
@@ -65,10 +48,9 @@ struct HalfModalView<Content: View> : View {
                     .animation(.interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
                     .gesture(drag)
                     
-                    
                 }.KeyboardAwarePadding()
             }.edgesIgnoringSafeArea(.all)
-        }
+        
     }
 }
 
