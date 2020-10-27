@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack() {
                 if self.users.showingMyProfileView {
                     VStack(alignment: .leading) {
                         withAnimation {

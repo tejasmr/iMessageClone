@@ -56,12 +56,6 @@ struct BottomBar: View {
                 
                 Button(action: {
                     self.users.showingNewContact = true
-                    
-                    self.users.showingGroups = false
-                    self.users.showingSidebar = false
-                    self.users.showingMyProfileView = false
-                    self.users.showingChats = false
-                    self.users.showingSettingsView = false
                 }) {
                     if !users.showingNewContact {
                         BottomBarItem(imageName: "person.badge.plus", systemName: "", isAsset: false, width: 25)

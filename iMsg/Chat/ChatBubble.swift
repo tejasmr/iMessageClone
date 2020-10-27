@@ -10,12 +10,13 @@ import SwiftUI
 struct ChatBubble: View {
     @State var message: Message = Message(content: "", isMe: false, timeStamp: "23:43")
     @State var user: User = User(color: Color.blue, name: "None")
+    @State var you: User
     
     var body: some View {
         if (message.isMe == true) {
             VStack(alignment: .trailing, spacing: 0) {
                 
-                UserBubble(color: user.color, content: message.content, timeStamp: message.timeStamp)
+                UserBubble(color: you.color, content: message.content, timeStamp: message.timeStamp)
                     .padding(.leading, 40)
                     .padding(.trailing, 10)
             }
@@ -33,7 +34,7 @@ struct ChatBubble: View {
 
 struct ChatBubble_Previews: PreviewProvider {
     static var previews: some View {
-        ChatBubble(message: Message(content: "Hi! You have won a jackpot of $40,000! Send your bank account and password to claim it now!",  isMe: true, timeStamp: "23:43"), user: User(color: Color.blue, name: "None"))
+        ChatBubble(message: Message(content: "Hi! You have won a jackpot of $40,000! Send your bank account and password to claim it now!",  isMe: true, timeStamp: "23:43"), user: User(color: Color.blue, name: "None"), you: User(color: Color.blue, name: "Anon"))
     }
 }
 

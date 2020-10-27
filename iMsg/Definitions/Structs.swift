@@ -10,18 +10,21 @@ import SwiftUI
 
 struct User: Hashable {
     var color: Color = Color.blue
-    var name: String = "anon"
+    var name: String = "Anon"
+    var colorName: String = "Blue"
 }
 
 class Users: ObservableObject {
     
     @Published var list: [User]
+    @Published var you: User
     @Published var showingSidebar: Bool
     @Published var showingNewContact: Bool
     @Published var showingMyProfileView: Bool
     @Published var showingChats: Bool
     @Published var showingGroups: Bool
     @Published var showingSettingsView: Bool
+    @Published var showingColorMenu: Bool
     
     init() {
         showingSidebar = false
@@ -30,6 +33,8 @@ class Users: ObservableObject {
         showingChats = false
         showingGroups = false
         showingSettingsView = false
+        showingColorMenu = false
+        you = User(color: Color.blue, name: "Anon")
         self.list = [
             User(color: Color.blue, name: "Blue"),
             User(color: Color.red, name: "Red"),

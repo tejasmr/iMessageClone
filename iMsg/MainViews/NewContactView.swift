@@ -9,7 +9,6 @@ import SwiftUI
 
 
 struct NewContactView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var username: String = ""
     @State var usercolor: Color = Color.gray
     @State var showColorMenu = false
@@ -44,76 +43,81 @@ struct NewContactView: View {
                 .frame(maxHeight: 240)
             }
             else {
+                
                 VStack(spacing: 0) {
                     Rectangle()
                         .frame(width: 60, height: 6)
                         .opacity(0.4)
                         .cornerRadius(5)
-                    VStack {
-                        Text("New Contact")
-                            .font(.headline)
-                            .padding(.top)
-                        
-                        HStack {
-                            Text("Name:")
+                        .padding(.bottom, 8)
+                    VStack(spacing: 0) {
+                        VStack {
+                            
+                            Text("New Contact")
                                 .font(.headline)
                             
-                            TextField("Enter Name", text: $username)
-                                .disableAutocorrection(true)
-                                .padding(10)
-                                .overlay(RoundedRectangle(cornerRadius: 50)
-                                            .stroke(Color.gray, lineWidth: 1)
-                                            .shadow(radius: 20))
-                        }
-                        .padding(10)
-                    }
-                    
-                    HStack {
-                        Text("Color:")
-                            .fontWeight(.bold)
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            self.showColorMenu.toggle()
-                        }) {
-                            Text("Select Color")
-                        }
-                        
-                        Text(chooseColor)
+                            
+                            HStack {
+                                Text("Name:")
+                                    .font(.headline)
+                                
+                                TextField("Enter Name", text: $username)
+                                    .disableAutocorrection(true)
+                                    .padding(10)
+                                    .overlay(RoundedRectangle(cornerRadius: 50)
+                                                .stroke(Color.gray, lineWidth: 1)
+                                                .shadow(radius: 20))
+                            }
                             .padding(10)
-                        Spacer()
-                    }
-                    .padding(10)
-                    
-                    HStack(spacing: 0) {
-                        Button(action: {
-                            if username != "" {
-                                self.users.list.append(User(color: usercolor, name: username))
-                                self.users.showingNewContact.toggle()
+                        }
+                        
+                        HStack {
+                            Text("Color:")
+                                .fontWeight(.bold)
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                self.showColorMenu.toggle()
+                            }) {
+                                Text("Select Color")
                             }
                             
-                        }) {
-                            Image("NewContact")
-                                .resizable()
-                                .frame(width: 50, height: 50)
+                            Text(chooseColor)
+                                .padding(10)
+                            Spacer()
+                        }
+                        .padding(10)
+                        
+                        HStack(spacing: 0) {
+                            Button(action: {
+                                if username != "" {
+                                    self.users.list.append(User(color: usercolor, name: username))
+                                    self.users.showingNewContact.toggle()
+                                }
+                                
+                            }) {
+                                Image("NewContact")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                            }
+                            
+                            Button(action: {
+                                self.users.showingNewContact.toggle()
+                            }) {
+                                Image("Cancel")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                            }
                         }
                         
-                        Button(action: {
-                            self.users.showingNewContact.toggle()
-                        }) {
-                            Image("Cancel")
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                        }
                     }
                 }
+                .frame(height: 240)
             }
         }
-        .frame(height: 240)
     }
 }
-
 
 
 struct NewContactView_Previews: PreviewProvider {

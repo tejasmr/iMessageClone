@@ -21,8 +21,7 @@ struct MyProfileView: View {
             }
             else {
                 VStack {
-                    Spacer()
-                    Text("My Profile View")
+                    MyProfile()
                     Spacer()
                 }
             }

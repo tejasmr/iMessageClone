@@ -23,6 +23,8 @@
 		7B1804E82541C6BC001DBA2B /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */; };
 		7B2624012547070F00E3435E /* BottomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2624002547070F00E3435E /* BottomBarItem.swift */; };
 		7B26240625470C1F00E3435E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26240525470C1F00E3435E /* SettingsView.swift */; };
+		7B26241B2547285E00E3435E /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26241A2547285E00E3435E /* MyProfile.swift */; };
+		7B26242A2547299600E3435E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2624292547299600E3435E /* Profile.swift */; };
 		7B27945D254558CC00026C2E /* NewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27945C254558CC00026C2E /* NewContactView.swift */; };
 		7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3168E0253DD9C800640989 /* iMsgApp.swift */; };
 		7B3168E3253DD9C800640989 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3168E2253DD9C800640989 /* ContentView.swift */; };
@@ -70,6 +72,8 @@
 		7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
 		7B2624002547070F00E3435E /* BottomBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarItem.swift; sourceTree = "<group>"; };
 		7B26240525470C1F00E3435E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7B26241A2547285E00E3435E /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
+		7B2624292547299600E3435E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		7B27945C254558CC00026C2E /* NewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactView.swift; sourceTree = "<group>"; };
 		7B3168DD253DD9C800640989 /* iMsg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMsg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3168E0253DD9C800640989 /* iMsgApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMsgApp.swift; sourceTree = "<group>"; };
@@ -177,6 +181,15 @@
 			path = BottomBar;
 			sourceTree = "<group>";
 		};
+		7B2624192547284A00E3435E /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				7B26241A2547285E00E3435E /* MyProfile.swift */,
+				7B2624292547299600E3435E /* Profile.swift */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
 		7B3168D4253DD9C800640989 = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +216,7 @@
 				7B26240D2547110200E3435E /* MainViews */,
 				7B262414254712AA00E3435E /* Definitions */,
 				7B26240E254711D800E3435E /* Chat */,
+				7B2624192547284A00E3435E /* MyProfile */,
 				7B262415254712D200E3435E /* BottomBar */,
 				7B2624102547127500E3435E /* SideBar */,
 				7B26240F2547125200E3435E /* HelperCode */,
@@ -371,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B076E072545DD25008251F5 /* MyProfileView.swift in Sources */,
+				7B26241B2547285E00E3435E /* MyProfile.swift in Sources */,
 				7B26240625470C1F00E3435E /* SettingsView.swift in Sources */,
 				7B27945D254558CC00026C2E /* NewContactView.swift in Sources */,
 				7B076DC825459788008251F5 /* MainView.swift in Sources */,
@@ -389,6 +404,7 @@
 				7B2624012547070F00E3435E /* BottomBarItem.swift in Sources */,
 				7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */,
 				7B076DE42545CB2A008251F5 /* SideBarRow.swift in Sources */,
+				7B26242A2547299600E3435E /* Profile.swift in Sources */,
 				7B076DDB2545B284008251F5 /* KeyboardAwareModifier.swift in Sources */,
 				7B076DE92545CB62008251F5 /* UserList.swift in Sources */,
 				7B316914253DDC9000640989 /* ChatBubble.swift in Sources */,
