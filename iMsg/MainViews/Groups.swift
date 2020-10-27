@@ -33,7 +33,7 @@ struct Groups: View {
                 }
             }
         }
-        .modifier(NavigationModifier())
+        .modifier(NavigationModifier(title: "Groups"))
     }
 }
 

@@ -36,7 +36,7 @@ struct SettingsView: View {
                 }
             }
         }
-        .modifier(NavigationModifier())
+        .modifier(NavigationModifier(title: "Settings"))
     }
 }
 

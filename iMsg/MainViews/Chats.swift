@@ -30,7 +30,7 @@ struct Chats: View {
                 ChatMainView()
             }
         }
-        .modifier(NavigationModifier())
+        .modifier(NavigationModifier(title: "Chats"))
     }
 }
 

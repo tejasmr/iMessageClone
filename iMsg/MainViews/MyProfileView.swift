@@ -32,7 +32,7 @@ struct MyProfileView: View {
                 }
             }
         }
-        .modifier(NavigationModifier())
+        .modifier(NavigationModifier(title: "My Profile"))
     }
 }
 

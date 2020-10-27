@@ -11,6 +11,7 @@ import SwiftUI
 
 struct NavigationModifier: ViewModifier {
     @EnvironmentObject var envObj: EnvObj
+    @State var title: String = "No Title"
     
     func body(content: Content) -> some View {
         content
@@ -26,7 +27,7 @@ struct NavigationModifier: ViewModifier {
             })
             
             // Title of the main view
-            .navigationBarTitle("Settings", displayMode: .inline)
+            .navigationBarTitle(title, displayMode: .inline)
             
             // Configure the background and foregroundColor of the Navigation bar of the main view
             .background(NavigationConfigurator { nc in
