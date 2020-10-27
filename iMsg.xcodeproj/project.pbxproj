@@ -34,6 +34,7 @@
 		7B3168FE253DD9CB00640989 /* iMsgUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3168FD253DD9CB00640989 /* iMsgUITests.swift */; };
 		7B31690F253DDC4E00640989 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B31690E253DDC4E00640989 /* ChatView.swift */; };
 		7B316914253DDC9000640989 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B316913253DDC9000640989 /* ChatBubble.swift */; };
+		7B345F8F2547E90C002D374B /* GetDateAndTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345F8E2547E90C002D374B /* GetDateAndTime.swift */; };
 		7B351D26254485B300414442 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B351D25254485B300414442 /* Lists.swift */; };
 		7B351D2B254486FE00414442 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B351D2A254486FE00414442 /* Structs.swift */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		7B3168FF253DD9CB00640989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B31690E253DDC4E00640989 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		7B316913253DDC9000640989 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		7B345F8E2547E90C002D374B /* GetDateAndTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateAndTime.swift; sourceTree = "<group>"; };
 		7B351D25254485B300414442 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
 		7B351D2A254486FE00414442 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 			children = (
 				7B076DDA2545B284008251F5 /* HalfModalView_v3.swift */,
 				7B076DD92545B283008251F5 /* KeyboardAwareModifier.swift */,
+				7B345F8E2547E90C002D374B /* GetDateAndTime.swift */,
 			);
 			path = HelperCode;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				7B076DCD2545996F008251F5 /* SideBarView.swift in Sources */,
 				7B1804E82541C6BC001DBA2B /* ChatRoomView.swift in Sources */,
 				7B076DDC2545B284008251F5 /* HalfModalView_v3.swift in Sources */,
+				7B345F8F2547E90C002D374B /* GetDateAndTime.swift in Sources */,
 				7B351D26254485B300414442 /* Lists.swift in Sources */,
 				7B31690F253DDC4E00640989 /* ChatView.swift in Sources */,
 				7B076DF32545CBD9008251F5 /* Chats.swift in Sources */,

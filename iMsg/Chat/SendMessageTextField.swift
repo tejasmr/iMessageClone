@@ -20,7 +20,7 @@ struct SendMessageTextField: View {
             
             Button(action: {
                 if (currentMessageContent != "") {
-                    messages.append(Message(content: currentMessageContent, isMe: true, timeStamp: "23:44"))
+                    messages.append(Message(content: currentMessageContent, isMe: true, timeStamp: getTime()))
                     currentMessageContent=""
                 }
             }){
