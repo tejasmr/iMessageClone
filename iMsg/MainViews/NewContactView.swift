@@ -20,7 +20,7 @@ struct NewContactView: View {
             // If showingColorMenu is set, show the ColorMenu
             if self.envObj.showingColorMenu {
                 VStack {
-                    ColorMenu()
+                    ColorMenu(isNewContact: true)
                 }
                 .background(Color.white)
                 .frame(width: UIScreen.main.bounds.width - 100)

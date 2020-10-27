@@ -7,11 +7,18 @@
 
 import SwiftUI
 
+// Main View for representing the UI and functionality of the Settings of our application
+
 struct SettingsView: View {
     @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
         VStack {
+            
+            // We check whether the showingSideBar flag is set or not
+            
+            // If showingSidebar is set, show the Sidebar
+            
             if self.envObj.showingSidebar {
                 VStack(alignment: .leading) {
                     withAnimation {
@@ -19,6 +26,8 @@ struct SettingsView: View {
                     }
                 }
             }
+            
+            // Else we show the Settings View
             else {
                 VStack {
                     Spacer()

@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// Contains UI and functionality for the MyProfileView
+
 struct MyProfile: View {
     @EnvironmentObject var envObj: EnvObj
     @State var username: String = ""
@@ -15,29 +17,21 @@ struct MyProfile: View {
     var body: some View {
         VStack(spacing: 0) {
             VStack {
+                
+                // Goto docs
                 Profile()
                     .padding(.top, 10)
             }
             if envObj.showingColorMenu {
                 VStack {
+                    
+                    // List of choosable colors
                     ScrollView {
-                        ForEach(chatColors, id: \.self) { chatColor in
-                            VStack(alignment: .center, spacing: 0) {
-                                Divider()
-                                    .padding(.horizontal, 20)
-                                
-                                Button(action: {
-                                    envObj.you.color = chatColor.color
-                                    envObj.you.colorName = chatColor.colorName
-                                    self.envObj.showingColorMenu.toggle()
-                                }) {
-                                    Text(chatColor.colorName)
-                                        .padding(.top, 10)
-                                        .frame(width: UIScreen.main.bounds.size.width - 100)
-                                }
-                            }
-                            
-                        }
+                        
+                        // Goto docs
+                        ColorMenu(isNewContact: false)
+                        
+                        // Divider UI
                         Divider()
                             .padding(.horizontal, 20)
                     }

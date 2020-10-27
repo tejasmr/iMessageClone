@@ -12,6 +12,10 @@ struct MyProfileView: View {
     
     var body: some View {
         VStack {
+            
+            // We check whether the showingSideBar flag is set or not
+            
+            // If showingSidebar is set, show the Sidebar
             if self.envObj.showingSidebar {
                 VStack(alignment: .leading) {
                     withAnimation {
@@ -19,6 +23,8 @@ struct MyProfileView: View {
                     }
                 }
             }
+            
+            // Else we show the MyProfile View
             else {
                 VStack {
                     MyProfile()

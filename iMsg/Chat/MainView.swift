@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  ChatMainView.swift
 //  iMsg
 //
 //  Created by Tejas M R on 25/10/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct ChatMainView: View {
     @State var showingNewContact = false
     @State var showingSidebar = false
     @EnvironmentObject var envObj: EnvObj
@@ -32,9 +32,9 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct ChatMainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        ChatMainView()
             .environmentObject(EnvObj())
     }
 }

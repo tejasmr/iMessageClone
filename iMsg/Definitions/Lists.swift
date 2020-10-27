@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
  
 
-
+// List of Colors to add to Profile or NewContact
 var chatColors: [ChatColor] = [
     ChatColor(color: Color.blue, colorName: "Blue"),
     ChatColor(color: Color.red, colorName: "Red"),
@@ -22,7 +22,7 @@ var chatColors: [ChatColor] = [
     
 ]
 
-
+// Dummy List for Messages
 var chatMessages: [Message] = [
     Message(content: "Hello anon", isMe: true, timeStamp: "09:34"),
     Message(content: "Hello tezz", isMe: false, timeStamp: "16:41"),

@@ -7,49 +7,53 @@
 
 import SwiftUI
 
+// Contains Label "Name:" and a Text Field to enter the userName, Label "Color:" and a button to toggle ColorMenu and a Label which shows which color is chosen
+
 struct Profile: View {
     @State var title: String = ""
     @EnvironmentObject var envObj: EnvObj
-    @State var username: String = ""
-    @State var usercolor: Color = Color.blue
     
     var body: some View {
         VStack(spacing: 0) {
-            
-            VStack {
-                if title != "" {
-                    Text(title)
-                        .font(.headline)
-                }
-                
-                HStack {
-                    Text("Name:")
-                        .font(.headline)
-                    
-                    TextField("Enter Name", text: $envObj.you.name)
-                        .disableAutocorrection(true)
-                        .padding(10)
-                        .overlay(RoundedRectangle(cornerRadius: 50)
-                                    .stroke(Color.gray, lineWidth: 1)
-                                    .shadow(radius: 20))
-                }
-                .padding(10)
-            }
-            
+        
+            // Horizontal Row of Label and TextField
             HStack {
+                
+                // Label UI
+                Text("Name:")
+                    .font(.headline)
+                
+                // TextField which uses the name in you object to set the Name of the User
+                TextField("Enter Name", text: $envObj.you.name)
+                    .disableAutocorrection(true)
+                    .padding(10)
+                    .overlay(RoundedRectangle(cornerRadius: 50)
+                                .stroke(Color.gray, lineWidth: 1)
+                                .shadow(radius: 20))
+            }
+            .padding(10)
+        
+            HStack {
+                
+                // Label UI
                 Text("Color:")
                     .fontWeight(.bold)
                 
+                // Spacer UI
                 Spacer()
                 
+                // Button to toggle the ColorMenu
                 Button(action: {
                     self.envObj.showingColorMenu.toggle()
                 }) {
                     Text("Select Color")
                 }
                 
-                Text(envObj.you.colorName)
+                // Label which shows the selected color
+                Text(self.envObj.you.colorName)
                     .padding(10)
+                
+                // Spacer UI
                 Spacer()
             }
             .padding(10)

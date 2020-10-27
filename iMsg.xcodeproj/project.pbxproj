@@ -235,13 +235,13 @@
 			children = (
 				7B345FA12548085D002D374B /* Common */,
 				7B345F932548053E002D374B /* NewContact */,
+				7B2624192547284A00E3435E /* MyProfile */,
+				7B26240F2547125200E3435E /* HelperCode */,
 				7B26240D2547110200E3435E /* MainViews */,
 				7B262414254712AA00E3435E /* Definitions */,
 				7B26240E254711D800E3435E /* Chat */,
-				7B2624192547284A00E3435E /* MyProfile */,
 				7B262415254712D200E3435E /* BottomBar */,
 				7B2624102547127500E3435E /* SideBar */,
-				7B26240F2547125200E3435E /* HelperCode */,
 				7B3168E0253DD9C800640989 /* iMsgApp.swift */,
 				7B3168E2253DD9C800640989 /* ContentView.swift */,
 				7B3168E4253DD9CB00640989 /* Assets.xcassets */,
@@ -280,7 +280,7 @@
 		7B345F932548053E002D374B /* NewContact */ = {
 			isa = PBXGroup;
 			children = (
-				7B345F9425480550002D374B /* ColorMenu.swift */,
+				7B345FA225480872002D374B /* SelectColor.swift */,
 				7B345F9C2548082B002D374B /* NewContactButtons.swift */,
 				7B345FAA254808F6002D374B /* NewContactNameField.swift */,
 				7B345FBE254813AC002D374B /* NewContactSubview.swift */,
@@ -291,7 +291,7 @@
 		7B345FA12548085D002D374B /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				7B345FA225480872002D374B /* SelectColor.swift */,
+				7B345F9425480550002D374B /* ColorMenu.swift */,
 				7B345FAF25480985002D374B /* SmallRoundedRectangleThingy.swift */,
 				7B345FB425480B0C002D374B /* NavigationModifier.swift */,
 			);

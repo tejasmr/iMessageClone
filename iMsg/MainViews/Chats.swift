@@ -13,6 +13,10 @@ struct Chats: View {
     
     var body: some View {
         ZStack {
+            
+            // We check whether the showingSideBar flag is set or not
+            
+            // If showingSidebar is set, show the Sidebar
             if self.envObj.showingSidebar {
                 VStack(alignment: .leading) {
                     withAnimation {
@@ -20,8 +24,10 @@ struct Chats: View {
                     }
                 }
             }
+            
+            // Else we show the ChatMainView View
             else {
-                MainView()
+                ChatMainView()
             }
         }
         .modifier(NavigationModifier())

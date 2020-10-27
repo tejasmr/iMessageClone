@@ -12,6 +12,7 @@ import SwiftUI
 struct ColorMenu: View {
     
     @EnvironmentObject var envObj: EnvObj
+    @State var isNewContact: Bool
     
     var body: some View {
         
@@ -28,9 +29,16 @@ struct ColorMenu: View {
                 // Show the colorName of the chatColor on the screen
                 Button(action: {
                     
-                    // Set the userColor and userColorName of the newContact object of envObj to the selected color
-                    self.envObj.newContact.userColor = chatColor.color
-                    self.envObj.newContact.userColorName = chatColor.colorName
+                    if isNewContact {
+                        // Set the userColor and userColorName of the newContact object of envObj to the selected color
+                        self.envObj.newContact.userColor = chatColor.color
+                        self.envObj.newContact.userColorName = chatColor.colorName
+                    }
+                    else {
+                        // Set the color and colorName of the you object in envObj
+                        self.envObj.you.color = chatColor.color
+                        self.envObj.you.colorName = chatColor.colorName
+                    }
                     
                     // Toggle the showingColorMenu when this button is pressed
                     self.envObj.showingColorMenu.toggle()
@@ -49,6 +57,6 @@ struct ColorMenu: View {
 
 struct ColorMenu_Previews: PreviewProvider {
     static var previews: some View {
-        ColorMenu().environmentObject(EnvObj())
+        ColorMenu(isNewContact: true).environmentObject(EnvObj())
     }
 }
