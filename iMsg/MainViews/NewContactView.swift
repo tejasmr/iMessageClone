@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Main View to encapsulte the NewContactSubView and ColorMenu
 
 struct NewContactView: View {
     @EnvironmentObject var envObj: EnvObj
