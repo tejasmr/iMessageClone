@@ -10,7 +10,7 @@
 		7B076DC825459788008251F5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DC725459788008251F5 /* MainView.swift */; };
 		7B076DCD2545996F008251F5 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DCC2545996F008251F5 /* SideBarView.swift */; };
 		7B076DDB2545B284008251F5 /* KeyboardAwareModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DD92545B283008251F5 /* KeyboardAwareModifier.swift */; };
-		7B076DDC2545B284008251F5 /* HalfModalView_v3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DDA2545B284008251F5 /* HalfModalView_v3.swift */; };
+		7B076DDC2545B284008251F5 /* HalfModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DDA2545B284008251F5 /* HalfModalView.swift */; };
 		7B076DE42545CB2A008251F5 /* SideBarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DE32545CB2A008251F5 /* SideBarRow.swift */; };
 		7B076DE92545CB62008251F5 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DE82545CB62008251F5 /* UserList.swift */; };
 		7B076DEE2545CBA7008251F5 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DED2545CBA7008251F5 /* BottomBar.swift */; };
@@ -41,6 +41,8 @@
 		7B345FAB254808F6002D374B /* NewContactNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345FAA254808F6002D374B /* NewContactNameField.swift */; };
 		7B345FB025480985002D374B /* SmallRoundedRectangleThingy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345FAF25480985002D374B /* SmallRoundedRectangleThingy.swift */; };
 		7B345FB525480B0C002D374B /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345FB425480B0C002D374B /* NavigationModifier.swift */; };
+		7B345FBA2548128C002D374B /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345FB92548128C002D374B /* NavigationConfigurator.swift */; };
+		7B345FBF254813AC002D374B /* NewContactSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345FBE254813AC002D374B /* NewContactSubview.swift */; };
 		7B351D26254485B300414442 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B351D25254485B300414442 /* Lists.swift */; };
 		7B351D2B254486FE00414442 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B351D2A254486FE00414442 /* Structs.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +68,7 @@
 		7B076DC725459788008251F5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7B076DCC2545996F008251F5 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		7B076DD92545B283008251F5 /* KeyboardAwareModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAwareModifier.swift; sourceTree = "<group>"; };
-		7B076DDA2545B284008251F5 /* HalfModalView_v3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalView_v3.swift; sourceTree = "<group>"; };
+		7B076DDA2545B284008251F5 /* HalfModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalView.swift; sourceTree = "<group>"; };
 		7B076DE32545CB2A008251F5 /* SideBarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarRow.swift; sourceTree = "<group>"; };
 		7B076DE82545CB62008251F5 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		7B076DED2545CBA7008251F5 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
@@ -103,6 +105,8 @@
 		7B345FAA254808F6002D374B /* NewContactNameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactNameField.swift; sourceTree = "<group>"; };
 		7B345FAF25480985002D374B /* SmallRoundedRectangleThingy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRoundedRectangleThingy.swift; sourceTree = "<group>"; };
 		7B345FB425480B0C002D374B /* NavigationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifier.swift; sourceTree = "<group>"; };
+		7B345FB92548128C002D374B /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
+		7B345FBE254813AC002D374B /* NewContactSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactSubview.swift; sourceTree = "<group>"; };
 		7B351D25254485B300414442 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
 		7B351D2A254486FE00414442 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,7 +166,8 @@
 		7B26240F2547125200E3435E /* HelperCode */ = {
 			isa = PBXGroup;
 			children = (
-				7B076DDA2545B284008251F5 /* HalfModalView_v3.swift */,
+				7B345FB92548128C002D374B /* NavigationConfigurator.swift */,
+				7B076DDA2545B284008251F5 /* HalfModalView.swift */,
 				7B076DD92545B283008251F5 /* KeyboardAwareModifier.swift */,
 				7B345F8E2547E90C002D374B /* GetDateAndTime.swift */,
 			);
@@ -278,6 +283,7 @@
 				7B345F9425480550002D374B /* ColorMenu.swift */,
 				7B345F9C2548082B002D374B /* NewContactButtons.swift */,
 				7B345FAA254808F6002D374B /* NewContactNameField.swift */,
+				7B345FBE254813AC002D374B /* NewContactSubview.swift */,
 			);
 			path = NewContact;
 			sourceTree = "<group>";
@@ -432,8 +438,9 @@
 				7B3168E3253DD9C800640989 /* ContentView.swift in Sources */,
 				7B076DCD2545996F008251F5 /* SideBarView.swift in Sources */,
 				7B1804E82541C6BC001DBA2B /* ChatRoomView.swift in Sources */,
+				7B345FBF254813AC002D374B /* NewContactSubview.swift in Sources */,
 				7B345FA325480872002D374B /* SelectColor.swift in Sources */,
-				7B076DDC2545B284008251F5 /* HalfModalView_v3.swift in Sources */,
+				7B076DDC2545B284008251F5 /* HalfModalView.swift in Sources */,
 				7B345F8F2547E90C002D374B /* GetDateAndTime.swift in Sources */,
 				7B351D26254485B300414442 /* Lists.swift in Sources */,
 				7B31690F253DDC4E00640989 /* ChatView.swift in Sources */,
@@ -449,6 +456,7 @@
 				7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */,
 				7B076DE42545CB2A008251F5 /* SideBarRow.swift in Sources */,
 				7B26242A2547299600E3435E /* Profile.swift in Sources */,
+				7B345FBA2548128C002D374B /* NavigationConfigurator.swift in Sources */,
 				7B076DDB2545B284008251F5 /* KeyboardAwareModifier.swift in Sources */,
 				7B076DE92545CB62008251F5 /* UserList.swift in Sources */,
 				7B316914253DDC9000640989 /* ChatBubble.swift in Sources */,

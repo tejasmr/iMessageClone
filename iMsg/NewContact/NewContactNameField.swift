@@ -7,15 +7,19 @@
 
 import SwiftUI
 
+// A Horizontal Row of a "Name:" label and a TextField "Enter Name" which takes the input fromt he user and puts it into newContact.userName
+
 struct NewContactNameField: View {
     @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
-        
         HStack {
+            
+            // Label UI
             Text("Name:")
                 .font(.headline)
             
+            // TextField which uses the userName in newContact to get the Name of the new contact
             TextField("Enter Name", text: $envObj.newContact.userName)
                 .disableAutocorrection(true)
                 .padding(10)

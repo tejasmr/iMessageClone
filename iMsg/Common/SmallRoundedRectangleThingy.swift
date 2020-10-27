@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// The small rounded rectangular thingy UI designers use
+
 struct SmallRoundedRectangleThingy: View {
     var body: some View {
         Rectangle()

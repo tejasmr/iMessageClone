@@ -10,6 +10,8 @@ import Foundation
 import SwiftUI
 import Combine
 
+// Helper code for HalfModalView
+
 struct KeyboardAwareModifier: ViewModifier {
     @State private var keyboardHeight: CGFloat = 0
 

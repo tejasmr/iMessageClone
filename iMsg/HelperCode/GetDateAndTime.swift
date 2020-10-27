@@ -5,7 +5,9 @@
 //  Created by Tejas M R on 27/10/20.
 //
 
-import Foundation
+import SwiftUI
+
+// To get the current date/time in different formats
 
 func getTime() -> String {
     

@@ -8,11 +8,7 @@
 
 import SwiftUI
 
-extension UIApplication {
-    func endEditing() {
-        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
+// A Half Modal View that can be dragged down to close
 
 struct HalfModalView<Content: View> : View {
     @GestureState private var dragState = DragState.inactive
@@ -98,6 +94,11 @@ func fraction_progress(lowerLimit: Double = 0, upperLimit:Double, current:Double
     
 }
 
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
 
 struct HalfModalView_v3_Previews: PreviewProvider {
     static var previews: some View {
