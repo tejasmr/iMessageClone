@@ -13,12 +13,12 @@ struct NewContactView: View {
     @State var usercolor: Color = Color.gray
     @State var showColorMenu = false
     @State var chooseColor: String = "None"
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
         ZStack {
             
-            if showColorMenu {
+            if self.envObj.showingColorMenu {
                 VStack {
                     ScrollView {
                         ForEach(chatColors, id: \.self) { chatColor in
@@ -28,7 +28,7 @@ struct NewContactView: View {
                             Button(action: {
                                 usercolor = chatColor.color
                                 chooseColor = chatColor.colorName
-                                self.showColorMenu.toggle()
+                                self.envObj.showingColorMenu.toggle()
                             }) {
                                 Text(chatColor.colorName)
                             }
@@ -78,7 +78,7 @@ struct NewContactView: View {
                             Spacer()
                             
                             Button(action: {
-                                self.showColorMenu.toggle()
+                                self.envObj.showingColorMenu.toggle()
                             }) {
                                 Text("Select Color")
                             }
@@ -92,8 +92,8 @@ struct NewContactView: View {
                         HStack(spacing: 0) {
                             Button(action: {
                                 if username != "" {
-                                    self.users.list.append(User(color: usercolor, name: username))
-                                    self.users.showingNewContact.toggle()
+                                    self.envObj.users.append(User(color: usercolor, name: username))
+                                    self.envObj.showingNewContact.toggle()
                                 }
                                 
                             }) {
@@ -103,7 +103,7 @@ struct NewContactView: View {
                             }
                             
                             Button(action: {
-                                self.users.showingNewContact.toggle()
+                                self.envObj.showingNewContact.toggle()
                             }) {
                                 Image("Cancel")
                                     .resizable()
@@ -122,7 +122,7 @@ struct NewContactView: View {
 
 struct NewContactView_Previews: PreviewProvider {
     static var previews: some View {
-        NewContactView()
+        NewContactView().environmentObject(EnvObj())
     }
 }
 

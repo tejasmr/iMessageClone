@@ -10,33 +10,33 @@ import UIKit
 
 struct ContentView: View {
     @State var showingNewContactView = false
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
         NavigationView {
             VStack() {
-                if self.users.showingMyProfileView {
+                if self.envObj.showingMyProfileView {
                     VStack(alignment: .leading) {
                         withAnimation {
                             MyProfileView()
                         }
                     }
                 }
-                else if self.users.showingChats {
+                else if self.envObj.showingChats {
                     VStack(alignment: .leading) {
                         withAnimation {
                             Chats()
                         }
                     }
                 }
-                else if self.users.showingGroups {
+                else if self.envObj.showingGroups {
                     VStack(alignment: .leading) {
                         withAnimation {
                             Groups()
                         }
                     }
                 }
-                else if self.users.showingSettingsView {
+                else if self.envObj.showingSettingsView {
                     VStack(alignment: .leading) {
                         withAnimation {
                             SettingsView()
@@ -44,10 +44,14 @@ struct ContentView: View {
                     }
                 }
                 else {
-                    Chats()
+                    VStack(alignment: .leading) {
+                        withAnimation {
+                            Chats()
+                        }
+                    }
                 }
-                if users.showingNewContact {
-                    HalfModalView(isShown: $users.showingNewContact) {
+                if envObj.showingNewContact {
+                    HalfModalView(isShown: $envObj.showingNewContact) {
                         NewContactView()
                     }
                     
@@ -55,15 +59,14 @@ struct ContentView: View {
                 else {
                     BottomBar()
                 }
-                
             }
-        }.environmentObject(users)
+        }.environmentObject(envObj)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(Users())
+        ContentView().environmentObject(EnvObj())
     }
 }
 

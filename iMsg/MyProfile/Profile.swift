@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Profile: View {
     @State var title: String = ""
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     @State var username: String = ""
     @State var usercolor: Color = Color.blue
     
@@ -26,7 +26,7 @@ struct Profile: View {
                     Text("Name:")
                         .font(.headline)
                     
-                    TextField("Enter Name", text: $users.you.name)
+                    TextField("Enter Name", text: $envObj.you.name)
                         .disableAutocorrection(true)
                         .padding(10)
                         .overlay(RoundedRectangle(cornerRadius: 50)
@@ -43,12 +43,12 @@ struct Profile: View {
                 Spacer()
                 
                 Button(action: {
-                    self.users.showingColorMenu.toggle()
+                    self.envObj.showingColorMenu.toggle()
                 }) {
                     Text("Select Color")
                 }
                 
-                Text(users.you.colorName)
+                Text(envObj.you.colorName)
                     .padding(10)
                 Spacer()
             }
@@ -59,6 +59,6 @@ struct Profile: View {
 
 struct ColorMenu_Previews: PreviewProvider {
     static var previews: some View {
-        Profile().environmentObject(Users())
+        Profile().environmentObject(EnvObj())
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BottomBar: View {
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
         VStack(alignment: .trailing) {
@@ -16,16 +16,16 @@ struct BottomBar: View {
             HStack(alignment: .bottom, spacing: 0) {
                 
                 Button(action: {
-                        self.users.showingMyProfileView = true
+                        self.envObj.showingMyProfileView = true
                     
-                        self.users.showingGroups = false
-                        self.users.showingSidebar = false
-                        self.users.showingNewContact = false
-                        self.users.showingChats = false
-                        self.users.showingSettingsView = false
+                        self.envObj.showingGroups = false
+                        self.envObj.showingSidebar = false
+                        self.envObj.showingNewContact = false
+                        self.envObj.showingChats = false
+                        self.envObj.showingSettingsView = false
                 }) {
                     
-                    if !users.showingNewContact {
+                    if !envObj.showingNewContact {
                         BottomBarItem(imageName: "ProfilePicPlaceholder", systemName: "", isAsset: true, width: 27)
                     }
                 }
@@ -35,16 +35,16 @@ struct BottomBar: View {
 //                    .padding(.top, 10)
 //
                 Button(action: {
-                    self.users.showingChats = true
+                    self.envObj.showingChats = true
                     
-                    self.users.showingGroups = false
-                    self.users.showingSidebar = false
-                    self.users.showingNewContact = false
-                    self.users.showingMyProfileView = false
-                    self.users.showingSettingsView = false
+                    self.envObj.showingGroups = false
+                    self.envObj.showingSidebar = false
+                    self.envObj.showingNewContact = false
+                    self.envObj.showingMyProfileView = false
+                    self.envObj.showingSettingsView = false
                 }) {
                     
-                    if !users.showingNewContact {
+                    if !envObj.showingNewContact {
                         BottomBarItem(imageName: "message", systemName: "", isAsset: false, width: 25)
                     }
                 }
@@ -55,9 +55,9 @@ struct BottomBar: View {
 //                    .padding(.top, 10)
                 
                 Button(action: {
-                    self.users.showingNewContact = true
+                    self.envObj.showingNewContact = true
                 }) {
-                    if !users.showingNewContact {
+                    if !envObj.showingNewContact {
                         BottomBarItem(imageName: "person.badge.plus", systemName: "", isAsset: false, width: 25)
                     }
                 }
@@ -67,16 +67,16 @@ struct BottomBar: View {
 //                    .frame(width: 1)
 //                    .padding(.top, 10)
                 Button(action: {
-                    self.users.showingGroups = true
+                    self.envObj.showingGroups = true
                     
-                    self.users.showingSidebar = false
-                    self.users.showingNewContact = false
-                    self.users.showingMyProfileView = false
-                    self.users.showingChats = false
-                    self.users.showingSettingsView = false
+                    self.envObj.showingSidebar = false
+                    self.envObj.showingNewContact = false
+                    self.envObj.showingMyProfileView = false
+                    self.envObj.showingChats = false
+                    self.envObj.showingSettingsView = false
                 }) {
                     
-                    if !users.showingNewContact {
+                    if !envObj.showingNewContact {
                         BottomBarItem(imageName: "rectangle.stack.person.crop", systemName: "", isAsset: false, width: 25)
                     }
                 }
@@ -87,16 +87,16 @@ struct BottomBar: View {
 //                    .padding(.top, 10)
                 
                 Button(action: {
-                    self.users.showingSettingsView = true
+                    self.envObj.showingSettingsView = true
                     
-                    self.users.showingGroups = false
-                    self.users.showingSidebar = false
-                    self.users.showingNewContact = false
-                    self.users.showingMyProfileView = false
-                    self.users.showingChats = false
+                    self.envObj.showingGroups = false
+                    self.envObj.showingSidebar = false
+                    self.envObj.showingNewContact = false
+                    self.envObj.showingMyProfileView = false
+                    self.envObj.showingChats = false
                 }) {
                     
-                    if !users.showingNewContact {
+                    if !envObj.showingNewContact {
                         BottomBarItem(imageName: "gear", systemName: "", isAsset: false, width: 25)
                     }
                 }
@@ -111,6 +111,6 @@ struct BottomBar: View {
 
 struct NewContactButton_Previews: PreviewProvider {
     static var previews: some View {
-        BottomBar().environmentObject(Users())
+        BottomBar().environmentObject(EnvObj())
     }
 }

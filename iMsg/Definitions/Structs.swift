@@ -14,9 +14,9 @@ struct User: Hashable {
     var colorName: String = "Blue"
 }
 
-class Users: ObservableObject {
+class EnvObj: ObservableObject {
     
-    @Published var list: [User]
+    @Published var users: [User]
     @Published var you: User
     @Published var showingSidebar: Bool
     @Published var showingNewContact: Bool
@@ -35,7 +35,7 @@ class Users: ObservableObject {
         showingSettingsView = false
         showingColorMenu = false
         you = User(color: Color.blue, name: "Anon")
-        self.list = [
+        self.users = [
             User(color: Color.blue, name: "Blue"),
             User(color: Color.red, name: "Red"),
             User(color: Color.black, name: "Black"),

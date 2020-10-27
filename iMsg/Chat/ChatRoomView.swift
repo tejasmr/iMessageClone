@@ -10,11 +10,11 @@ import SwiftUI
 
 
 struct ChatRoomView: View {
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     @State var user: User = User(color: Color.blue, name: "None")
     
     var body: some View {
-        NavigationLink(destination: ChatView(user: user, you: self.users.you).navigationBarTitle(user.name, displayMode: .inline)) {
+        NavigationLink(destination: ChatView(user: user, you: self.envObj.you).navigationBarTitle(user.name, displayMode: .inline)) {
             HStack {
                 Text(user.name)
                     .fontWeight(.bold)
@@ -34,6 +34,6 @@ struct ChatRoomView: View {
 
 struct ChatRooms_Previews: PreviewProvider {
     static var previews: some View {
-        ChatRoomView().environmentObject(Users())
+        ChatRoomView().environmentObject(EnvObj())
     }
 }

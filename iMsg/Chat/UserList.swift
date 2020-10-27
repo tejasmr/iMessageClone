@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct UserList: View {
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
         ScrollView {
-            ForEach(users.list, id: \.self) { user in
+            ForEach(envObj.users, id: \.self) { user in
                 Divider()
                     .padding(.horizontal, 20)
                 ChatRoomView(user: user)
@@ -26,6 +26,6 @@ struct UserList: View {
 
 struct UserList_Previews: PreviewProvider {
     static var previews: some View {
-        UserList()
+        UserList().environmentObject(EnvObj())
     }
 }

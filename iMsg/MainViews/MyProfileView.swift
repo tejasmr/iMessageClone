@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MyProfileView: View {
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
         VStack {
-            if self.users.showingSidebar {
+            if self.envObj.showingSidebar {
                 VStack(alignment: .leading) {
                     withAnimation {
                         SideBarView()
@@ -27,7 +27,7 @@ struct MyProfileView: View {
             }
         }
         .navigationBarItems(leading: Button(action: {
-            self.users.showingSidebar.toggle()
+            self.envObj.showingSidebar.toggle()
         }) {
             Image(systemName: "line.horizontal.3")
                 .resizable()
@@ -44,6 +44,6 @@ struct MyProfileView: View {
 
 struct MyProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        MyProfileView().environmentObject(Users())
+        MyProfileView().environmentObject(EnvObj())
     }
 }

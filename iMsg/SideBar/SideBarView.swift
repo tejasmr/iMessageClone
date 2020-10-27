@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct SideBarView: View {
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
         VStack {
             VStack(alignment: .center, spacing: 2) {
                 Button(
                     action: {
-                        self.users.showingMyProfileView = true
+                        self.envObj.showingMyProfileView = true
                     
-                        self.users.showingGroups = false
-                        self.users.showingSidebar = false
-                        self.users.showingNewContact = false
-                        self.users.showingChats = false
-                        self.users.showingSettingsView = false
+                        self.envObj.showingGroups = false
+                        self.envObj.showingSidebar = false
+                        self.envObj.showingNewContact = false
+                        self.envObj.showingChats = false
+                        self.envObj.showingSettingsView = false
                     }) {
                     SideBarRow(image: "person.crop.circle", text: "My Profile")
                 }
@@ -29,13 +29,13 @@ struct SideBarView: View {
                     .padding(.horizontal, 20)
                 Button(
                     action: {
-                        self.users.showingChats = true
+                        self.envObj.showingChats = true
                         
-                        self.users.showingGroups = false
-                        self.users.showingSidebar = false
-                        self.users.showingNewContact = false
-                        self.users.showingMyProfileView = false
-                        self.users.showingSettingsView = false
+                        self.envObj.showingGroups = false
+                        self.envObj.showingSidebar = false
+                        self.envObj.showingNewContact = false
+                        self.envObj.showingMyProfileView = false
+                        self.envObj.showingSettingsView = false
                     }
                 ) {
                     SideBarRow(image: "message", text: "Chats")
@@ -44,13 +44,13 @@ struct SideBarView: View {
                     .padding(.horizontal, 20)
                 Button(
                     action: {
-                        self.users.showingGroups = true
+                        self.envObj.showingGroups = true
                         
-                        self.users.showingSidebar = false
-                        self.users.showingNewContact = false
-                        self.users.showingMyProfileView = false
-                        self.users.showingChats = false
-                        self.users.showingSettingsView = false
+                        self.envObj.showingSidebar = false
+                        self.envObj.showingNewContact = false
+                        self.envObj.showingMyProfileView = false
+                        self.envObj.showingChats = false
+                        self.envObj.showingSettingsView = false
                     }
                 ) {
                     SideBarRow(image: "rectangle.stack.person.crop", text: "Groups")
@@ -59,13 +59,13 @@ struct SideBarView: View {
                     .padding(.horizontal, 20)
                 Button(
                     action: {
-                        self.users.showingSettingsView = true
+                        self.envObj.showingSettingsView = true
                         
-                        self.users.showingGroups = false
-                        self.users.showingSidebar = false
-                        self.users.showingNewContact = false
-                        self.users.showingMyProfileView = false
-                        self.users.showingChats = false
+                        self.envObj.showingGroups = false
+                        self.envObj.showingSidebar = false
+                        self.envObj.showingNewContact = false
+                        self.envObj.showingMyProfileView = false
+                        self.envObj.showingChats = false
                     }
                 ) {
                     SideBarRow(image: "gear", text: "Settings")
@@ -85,6 +85,6 @@ struct SideBarView: View {
 
 struct SideBarView_Previews: PreviewProvider {
     static var previews: some View {
-        SideBarView().environmentObject(Users())
+        SideBarView().environmentObject(EnvObj())
     }
 }

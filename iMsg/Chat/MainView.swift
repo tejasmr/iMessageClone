@@ -10,14 +10,14 @@ import SwiftUI
 struct MainView: View {
     @State var showingNewContact = false
     @State var showingSidebar = false
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
         VStack {
             UserList()
         }
         .navigationBarItems(leading: Button(action: {
-            self.users.showingSidebar.toggle()
+            self.envObj.showingSidebar.toggle()
         }) {
             Image(systemName: "line.horizontal.3")
                 .resizable()
@@ -35,7 +35,7 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-            .environmentObject(Users())
+            .environmentObject(EnvObj())
     }
 }
 

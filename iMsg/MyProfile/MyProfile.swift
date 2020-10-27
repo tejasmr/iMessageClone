@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MyProfile: View {
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     @State var username: String = ""
     @State var usercolor: Color = Color.gray
     
@@ -18,7 +18,7 @@ struct MyProfile: View {
                 Profile()
                     .padding(.top, 10)
             }
-            if users.showingColorMenu {
+            if envObj.showingColorMenu {
                 VStack {
                     ScrollView {
                         ForEach(chatColors, id: \.self) { chatColor in
@@ -27,9 +27,9 @@ struct MyProfile: View {
                                     .padding(.horizontal, 20)
                                 
                                 Button(action: {
-                                    users.you.color = chatColor.color
-                                    users.you.colorName = chatColor.colorName
-                                    self.users.showingColorMenu.toggle()
+                                    envObj.you.color = chatColor.color
+                                    envObj.you.colorName = chatColor.colorName
+                                    self.envObj.showingColorMenu.toggle()
                                 }) {
                                     Text(chatColor.colorName)
                                         .padding(.top, 10)
@@ -52,6 +52,6 @@ struct MyProfile: View {
 
 struct MyProfile_Previews: PreviewProvider {
     static var previews: some View {
-        MyProfile().environmentObject(Users())
+        MyProfile().environmentObject(EnvObj())
     }
 }

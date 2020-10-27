@@ -9,11 +9,11 @@ import SwiftUI
 
 struct Chats: View {
     @State var showingNewContactView = false
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
         ZStack {
-            if self.users.showingSidebar {
+            if self.envObj.showingSidebar {
                 VStack(alignment: .leading) {
                     withAnimation {
                         SideBarView()
@@ -25,7 +25,7 @@ struct Chats: View {
             }
         }
         .navigationBarItems(leading: Button(action: {
-            self.users.showingSidebar.toggle()
+            self.envObj.showingSidebar.toggle()
         }) {
             Image(systemName: "line.horizontal.3")
                 .resizable()
@@ -42,6 +42,6 @@ struct Chats: View {
 
 struct Chats_Previews: PreviewProvider {
     static var previews: some View {
-        Chats().environmentObject(Users())
+        Chats().environmentObject(EnvObj())
     }
 }

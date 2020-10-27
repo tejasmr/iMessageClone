@@ -12,7 +12,7 @@ struct UserBubble: View {
     @State var content: String = "Lorem Ipsum"
     @State var timeStamp: String = "23:43"
     @State private var toggleTime: Bool = false
-    @EnvironmentObject var users: Users
+    @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
         VStack(alignment: .trailing, spacing: 0) {
@@ -24,7 +24,7 @@ struct UserBubble: View {
                 .cornerRadius(18, corners: [.topLeft, .topRight, .bottomLeft])
             if toggleTime {
                 HStack(spacing: 0) {
-                    Text(users.you.name)
+                    Text(envObj.you.name)
                         .font(.system(size: 13, weight: .bold))
                     Text(" (" + timeStamp + ")")
                         .font(.system(size: 13, weight: .bold))
@@ -43,6 +43,6 @@ struct UserBubble: View {
 
 struct UserBubble_Previews: PreviewProvider {
     static var previews: some View {
-        UserBubble().environmentObject(Users())
+        UserBubble().environmentObject(EnvObj())
     }
 }
