@@ -35,6 +35,12 @@
 		7B31690F253DDC4E00640989 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B31690E253DDC4E00640989 /* ChatView.swift */; };
 		7B316914253DDC9000640989 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B316913253DDC9000640989 /* ChatBubble.swift */; };
 		7B345F8F2547E90C002D374B /* GetDateAndTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345F8E2547E90C002D374B /* GetDateAndTime.swift */; };
+		7B345F9525480550002D374B /* ColorMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345F9425480550002D374B /* ColorMenu.swift */; };
+		7B345F9D2548082B002D374B /* NewContactButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345F9C2548082B002D374B /* NewContactButtons.swift */; };
+		7B345FA325480872002D374B /* SelectColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345FA225480872002D374B /* SelectColor.swift */; };
+		7B345FAB254808F6002D374B /* NewContactNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345FAA254808F6002D374B /* NewContactNameField.swift */; };
+		7B345FB025480985002D374B /* SmallRoundedRectangleThingy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345FAF25480985002D374B /* SmallRoundedRectangleThingy.swift */; };
+		7B345FB525480B0C002D374B /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345FB425480B0C002D374B /* NavigationModifier.swift */; };
 		7B351D26254485B300414442 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B351D25254485B300414442 /* Lists.swift */; };
 		7B351D2B254486FE00414442 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B351D2A254486FE00414442 /* Structs.swift */; };
 /* End PBXBuildFile section */
@@ -91,6 +97,12 @@
 		7B31690E253DDC4E00640989 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		7B316913253DDC9000640989 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		7B345F8E2547E90C002D374B /* GetDateAndTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateAndTime.swift; sourceTree = "<group>"; };
+		7B345F9425480550002D374B /* ColorMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMenu.swift; sourceTree = "<group>"; };
+		7B345F9C2548082B002D374B /* NewContactButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactButtons.swift; sourceTree = "<group>"; };
+		7B345FA225480872002D374B /* SelectColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectColor.swift; sourceTree = "<group>"; };
+		7B345FAA254808F6002D374B /* NewContactNameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactNameField.swift; sourceTree = "<group>"; };
+		7B345FAF25480985002D374B /* SmallRoundedRectangleThingy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRoundedRectangleThingy.swift; sourceTree = "<group>"; };
+		7B345FB425480B0C002D374B /* NavigationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifier.swift; sourceTree = "<group>"; };
 		7B351D25254485B300414442 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
 		7B351D2A254486FE00414442 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,6 +228,8 @@
 		7B3168DF253DD9C800640989 /* iMsg */ = {
 			isa = PBXGroup;
 			children = (
+				7B345FA12548085D002D374B /* Common */,
+				7B345F932548053E002D374B /* NewContact */,
 				7B26240D2547110200E3435E /* MainViews */,
 				7B262414254712AA00E3435E /* Definitions */,
 				7B26240E254711D800E3435E /* Chat */,
@@ -256,6 +270,26 @@
 				7B3168FF253DD9CB00640989 /* Info.plist */,
 			);
 			path = iMsgUITests;
+			sourceTree = "<group>";
+		};
+		7B345F932548053E002D374B /* NewContact */ = {
+			isa = PBXGroup;
+			children = (
+				7B345F9425480550002D374B /* ColorMenu.swift */,
+				7B345F9C2548082B002D374B /* NewContactButtons.swift */,
+				7B345FAA254808F6002D374B /* NewContactNameField.swift */,
+			);
+			path = NewContact;
+			sourceTree = "<group>";
+		};
+		7B345FA12548085D002D374B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7B345FA225480872002D374B /* SelectColor.swift */,
+				7B345FAF25480985002D374B /* SmallRoundedRectangleThingy.swift */,
+				7B345FB425480B0C002D374B /* NavigationModifier.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,17 +428,23 @@
 				7B076DC825459788008251F5 /* MainView.swift in Sources */,
 				7B076DFD2545CC54008251F5 /* UserBubble.swift in Sources */,
 				7B351D2B254486FE00414442 /* Structs.swift in Sources */,
+				7B345FB025480985002D374B /* SmallRoundedRectangleThingy.swift in Sources */,
 				7B3168E3253DD9C800640989 /* ContentView.swift in Sources */,
 				7B076DCD2545996F008251F5 /* SideBarView.swift in Sources */,
 				7B1804E82541C6BC001DBA2B /* ChatRoomView.swift in Sources */,
+				7B345FA325480872002D374B /* SelectColor.swift in Sources */,
 				7B076DDC2545B284008251F5 /* HalfModalView_v3.swift in Sources */,
 				7B345F8F2547E90C002D374B /* GetDateAndTime.swift in Sources */,
 				7B351D26254485B300414442 /* Lists.swift in Sources */,
 				7B31690F253DDC4E00640989 /* ChatView.swift in Sources */,
 				7B076DF32545CBD9008251F5 /* Chats.swift in Sources */,
+				7B345F9D2548082B002D374B /* NewContactButtons.swift in Sources */,
+				7B345FB525480B0C002D374B /* NavigationModifier.swift in Sources */,
+				7B345F9525480550002D374B /* ColorMenu.swift in Sources */,
 				7B076DEE2545CBA7008251F5 /* BottomBar.swift in Sources */,
 				7B076DF82545CC21008251F5 /* SendMessageTextField.swift in Sources */,
 				7B076E022545CC74008251F5 /* NotUserBubble.swift in Sources */,
+				7B345FAB254808F6002D374B /* NewContactNameField.swift in Sources */,
 				7B2624012547070F00E3435E /* BottomBarItem.swift in Sources */,
 				7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */,
 				7B076DE42545CB2A008251F5 /* SideBarRow.swift in Sources */,

@@ -25,6 +25,7 @@ class EnvObj: ObservableObject {
     @Published var showingGroups: Bool
     @Published var showingSettingsView: Bool
     @Published var showingColorMenu: Bool
+    @Published var newContact: NewContactEnvObj
     
     init() {
         showingSidebar = false
@@ -35,6 +36,8 @@ class EnvObj: ObservableObject {
         showingSettingsView = false
         showingColorMenu = false
         you = User(color: Color.blue, name: "Anon")
+        newContact = NewContactEnvObj(userColor: Color.blue, userName: "", userColorName: "Blue")
+        
         self.users = [
             User(color: Color.blue, name: "Blue"),
             User(color: Color.red, name: "Red"),
@@ -94,4 +97,11 @@ struct Structs_Previews: PreviewProvider {
     static var previews: some View {
         /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
+}
+
+
+struct NewContactEnvObj {
+    var userColor: Color = Color.blue
+    var userName: String = ""
+    var userColorName: String = "Blue"
 }

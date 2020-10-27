@@ -9,108 +9,34 @@ import SwiftUI
 
 
 struct NewContactView: View {
-    @State var username: String = ""
-    @State var usercolor: Color = Color.gray
-    @State var showColorMenu = false
-    @State var chooseColor: String = "None"
     @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
         ZStack {
-            
             if self.envObj.showingColorMenu {
                 VStack {
-                    ScrollView {
-                        ForEach(chatColors, id: \.self) { chatColor in
-                            Divider()
-                                .padding(.horizontal, 20)
-                            
-                            Button(action: {
-                                usercolor = chatColor.color
-                                chooseColor = chatColor.colorName
-                                self.envObj.showingColorMenu.toggle()
-                            }) {
-                                Text(chatColor.colorName)
-                            }
-                            
-                        }
-                        Divider()
-                            .padding(.horizontal, 20)
-                    }
+                    ColorMenu()
                 }
                 .background(Color.white)
                 .frame(width: UIScreen.main.bounds.width - 100)
                 .frame(maxHeight: 240)
             }
             else {
-                
                 VStack(spacing: 0) {
-                    Rectangle()
-                        .frame(width: 60, height: 6)
-                        .opacity(0.4)
-                        .cornerRadius(5)
-                        .padding(.bottom, 8)
+                    SmallRoundedRectangleThingy()
+                        .padding(.bottom, 5)
+                    
                     VStack(spacing: 0) {
-                        VStack {
-                            
-                            Text("New Contact")
-                                .font(.headline)
-                            
-                            
-                            HStack {
-                                Text("Name:")
-                                    .font(.headline)
-                                
-                                TextField("Enter Name", text: $username)
-                                    .disableAutocorrection(true)
-                                    .padding(10)
-                                    .overlay(RoundedRectangle(cornerRadius: 50)
-                                                .stroke(Color.gray, lineWidth: 1)
-                                                .shadow(radius: 20))
-                            }
+                        
+                        Text("New Contact")
+                            .font(.headline)
+                            .padding(.bottom, 10)
+                        
+                        NewContactNameField()
+                        SelectColor()
                             .padding(10)
-                        }
                         
-                        HStack {
-                            Text("Color:")
-                                .fontWeight(.bold)
-                            
-                            Spacer()
-                            
-                            Button(action: {
-                                self.envObj.showingColorMenu.toggle()
-                            }) {
-                                Text("Select Color")
-                            }
-                            
-                            Text(chooseColor)
-                                .padding(10)
-                            Spacer()
-                        }
-                        .padding(10)
-                        
-                        HStack(spacing: 0) {
-                            Button(action: {
-                                if username != "" {
-                                    self.envObj.users.append(User(color: usercolor, name: username))
-                                    self.envObj.showingNewContact.toggle()
-                                }
-                                
-                            }) {
-                                Image("NewContact")
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
-                            }
-                            
-                            Button(action: {
-                                self.envObj.showingNewContact.toggle()
-                            }) {
-                                Image("Cancel")
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
-                            }
-                        }
-                        
+                        NewContactButtons()
                     }
                 }
                 .frame(height: 240)

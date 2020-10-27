@@ -57,7 +57,7 @@ struct Profile: View {
     }
 }
 
-struct ColorMenu_Previews: PreviewProvider {
+struct Profile_Previews: PreviewProvider {
     static var previews: some View {
         Profile().environmentObject(EnvObj())
     }
