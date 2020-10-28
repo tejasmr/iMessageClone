@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// If the image/icon in the bottom bar is an asset, set isAsset to true and if it is a system SF icon, isAsset is set to false
+
 struct BottomBarItem: View {
     var imageName: String
     var systemName: String
@@ -14,6 +16,8 @@ struct BottomBarItem: View {
     var width: CGFloat
     
     var body: some View {
+        
+        // Check if isAsset is set
         if isAsset {
             Image(imageName)
                 .resizable()
@@ -25,6 +29,8 @@ struct BottomBarItem: View {
                 .clipShape(Circle())
                 .shadow(radius: 5)
         }
+        
+        // If isAsset is false
         else {
             Image(systemName: imageName)
                 .resizable()

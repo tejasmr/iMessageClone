@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+// 5 icons, one for MyProfileView, one for Chats, one for NewContactView, one for Groups and one for SettingsView
+
+// Each Icon is a button in which all the flags except the flag which represents that View is set to false. Only the flag that represents the View is set to true
+
+// We Show the BottomBar associated with each View only if the showingNewContact is set to false, so that when the NewContactView is being shown, there will be no unforeseen interruptions
+
+
+
 struct BottomBar: View {
     @EnvironmentObject var envObj: EnvObj
     
@@ -29,11 +37,7 @@ struct BottomBar: View {
                         BottomBarItem(imageName: "ProfilePicPlaceholder", systemName: "", isAsset: true, width: 27)
                     }
                 }
-//                Rectangle()
-//                    .foregroundColor(Color.gray.opacity(0.4))
-//                    .frame(width: 1)
-//                    .padding(.top, 10)
-//
+                
                 Button(action: {
                     self.envObj.showingChats = true
                     
@@ -61,11 +65,7 @@ struct BottomBar: View {
                         BottomBarItem(imageName: "person.badge.plus", systemName: "", isAsset: false, width: 25)
                     }
                 }
-//
-//                Rectangle()
-//                    .foregroundColor(Color.gray.opacity(0.4))
-//                    .frame(width: 1)
-//                    .padding(.top, 10)
+
                 Button(action: {
                     self.envObj.showingGroups = true
                     
@@ -80,11 +80,6 @@ struct BottomBar: View {
                         BottomBarItem(imageName: "rectangle.stack.person.crop", systemName: "", isAsset: false, width: 25)
                     }
                 }
-//
-//                Rectangle()
-//                    .foregroundColor(Color.gray.opacity(0.4))
-//                    .frame(width: 1)
-//                    .padding(.top, 10)
                 
                 Button(action: {
                     self.envObj.showingSettingsView = true
