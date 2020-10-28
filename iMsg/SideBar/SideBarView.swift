@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+
+// 4 rows, one for MyProfileView, one for Chats, one for Groups and one for SettingsView
+
+// Each Icon is a button in which all the flags except the flag which represents that View is set to false. Only the flag that represents the View is set to true
+
+// We use the SideBarRow for UI of each Row
+
+
 struct SideBarView: View {
     @EnvironmentObject var envObj: EnvObj
     

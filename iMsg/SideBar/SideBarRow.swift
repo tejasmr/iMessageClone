@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// A Row in the SideBar. It contains one Image and One Label as sent through the parameters
+
 struct SideBarRow: View {
     var image = "person.crop.circle"
     var text = "My Profile"
