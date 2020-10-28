@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+// Each message is a ChatBubble and the latest message you send is appended to the bottom of the list.
+
+// It also has a text input field for the user to input message.
 
 struct ChatView: View {
     @State var currentMessageContent: String = ""
@@ -16,16 +19,17 @@ struct ChatView: View {
         
     var body: some View {
         VStack(spacing: 0) {
+            
             ScrollView {
                 ForEach(messages, id: \.self) { message in
                     ChatBubble(message: message, user: user, you: you)
                 }.flip()
             }
             .flip()
+            
             SendMessageTextField(currentMessageContent: $currentMessageContent, messages: $messages)
                 .frame(alignment: .center)
                 .padding(5)
-            
         }
     }
 }

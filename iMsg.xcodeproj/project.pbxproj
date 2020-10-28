@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B076DC825459788008251F5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DC725459788008251F5 /* MainView.swift */; };
+		7B076DC825459788008251F5 /* ChatMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DC725459788008251F5 /* ChatMainView.swift */; };
 		7B076DCD2545996F008251F5 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DCC2545996F008251F5 /* SideBarView.swift */; };
 		7B076DDB2545B284008251F5 /* KeyboardAwareModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DD92545B283008251F5 /* KeyboardAwareModifier.swift */; };
 		7B076DDC2545B284008251F5 /* HalfModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076DDA2545B284008251F5 /* HalfModalView.swift */; };
@@ -65,7 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7B076DC725459788008251F5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7B076DC725459788008251F5 /* ChatMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMainView.swift; sourceTree = "<group>"; };
 		7B076DCC2545996F008251F5 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		7B076DD92545B283008251F5 /* KeyboardAwareModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAwareModifier.swift; sourceTree = "<group>"; };
 		7B076DDA2545B284008251F5 /* HalfModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalView.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				7B31690E253DDC4E00640989 /* ChatView.swift */,
 				7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */,
 				7B076DE82545CB62008251F5 /* UserList.swift */,
-				7B076DC725459788008251F5 /* MainView.swift */,
+				7B076DC725459788008251F5 /* ChatMainView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -431,7 +431,7 @@
 				7B26241B2547285E00E3435E /* MyProfile.swift in Sources */,
 				7B26240625470C1F00E3435E /* SettingsView.swift in Sources */,
 				7B27945D254558CC00026C2E /* NewContactView.swift in Sources */,
-				7B076DC825459788008251F5 /* MainView.swift in Sources */,
+				7B076DC825459788008251F5 /* ChatMainView.swift in Sources */,
 				7B076DFD2545CC54008251F5 /* UserBubble.swift in Sources */,
 				7B351D2B254486FE00414442 /* Structs.swift in Sources */,
 				7B345FB025480985002D374B /* SmallRoundedRectangleThingy.swift in Sources */,

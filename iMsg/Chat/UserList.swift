@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+// This View shows the scrollable list of Users/Conatacts the user is in contact with
+
+// This has some UI and it leads to the ChatRoomView for each User/Contact
+
 struct UserList: View {
     @EnvironmentObject var envObj: EnvObj
     

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+// It takes an other contact/user in as a parameter and it links to a ChatView which has the list of messages between you and the other contact/user. I also has small UI elements.
 
 struct ChatRoomView: View {
     @EnvironmentObject var envObj: EnvObj
