@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// A TextField with placeholder "Enter Message" which takes the message as input and a button which appends the entered message to the list of messages
+
 struct SendMessageTextField: View {
     @Binding var currentMessageContent: String
     @Binding var messages: [Message]

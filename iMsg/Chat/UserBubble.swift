@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// It is a message enclosed in a bubble(container), which sticks to the right side. If the toggleTime flag is unset, the time and username is not shown
+
 struct UserBubble: View {
     @State var color: Color = Color.blue
     @State var content: String = "Lorem Ipsum"

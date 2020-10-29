@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// If isMe is set then we show the UserBubble, else we show it in the form of NotUserBubble
+
 struct ChatBubble: View {
     @State var message: Message = Message(content: "", isMe: false, timeStamp: "23:43")
     @State var user: User = User(color: Color.blue, name: "None")
