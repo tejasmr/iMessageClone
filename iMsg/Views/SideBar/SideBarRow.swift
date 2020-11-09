@@ -17,8 +17,10 @@ struct SideBarRow: View {
             Image(systemName: image)
                 .resizable()
                 .frame(width: 20, height: 20)
+                .foregroundColor(.blue)
             Text(text)
                 .font(.headline)
+                .foregroundColor(.blue)
         }
         .padding(10)
     }

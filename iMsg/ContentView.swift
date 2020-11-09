@@ -60,7 +60,9 @@ struct ContentView: View {
                     BottomBar()
                 }
             }
-        }.environmentObject(envObj)
+        }
+        .accentColor(.white)
+        .environmentObject(envObj)
     }
 }
 

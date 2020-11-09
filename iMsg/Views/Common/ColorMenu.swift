@@ -44,6 +44,7 @@ struct ColorMenu: View {
                     self.envObj.showingColorMenu.toggle()
                 }) {
                     Text(chatColor.colorName)
+                        .foregroundColor(.blue)
                         .padding(.top, 10)
                         .frame(width: UIScreen.main.bounds.size.width - 100)
                 }

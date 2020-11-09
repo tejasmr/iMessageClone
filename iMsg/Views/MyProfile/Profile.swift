@@ -47,6 +47,7 @@ struct Profile: View {
                     self.envObj.showingColorMenu.toggle()
                 }) {
                     Text("Select Color")
+                        .foregroundColor(.blue)
                 }
                 
                 // Label which shows the selected color
