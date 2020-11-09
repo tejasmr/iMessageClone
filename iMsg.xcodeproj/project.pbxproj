@@ -45,6 +45,7 @@
 		7B345FBF254813AC002D374B /* NewContactSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B345FBE254813AC002D374B /* NewContactSubview.swift */; };
 		7B351D26254485B300414442 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B351D25254485B300414442 /* Lists.swift */; };
 		7B351D2B254486FE00414442 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B351D2A254486FE00414442 /* Structs.swift */; };
+		7B435F972559846500DB6CE4 /* PlaceHolderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B435F962559846500DB6CE4 /* PlaceHolderModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		7B345FBE254813AC002D374B /* NewContactSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactSubview.swift; sourceTree = "<group>"; };
 		7B351D25254485B300414442 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
 		7B351D2A254486FE00414442 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		7B435F962559846500DB6CE4 /* PlaceHolderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,15 +185,6 @@
 			path = SideBar;
 			sourceTree = "<group>";
 		};
-		7B262414254712AA00E3435E /* Definitions */ = {
-			isa = PBXGroup;
-			children = (
-				7B351D25254485B300414442 /* Lists.swift */,
-				7B351D2A254486FE00414442 /* Structs.swift */,
-			);
-			path = Definitions;
-			sourceTree = "<group>";
-		};
 		7B262415254712D200E3435E /* BottomBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,15 +226,8 @@
 		7B3168DF253DD9C800640989 /* iMsg */ = {
 			isa = PBXGroup;
 			children = (
-				7B345FA12548085D002D374B /* Common */,
-				7B345F932548053E002D374B /* NewContact */,
-				7B2624192547284A00E3435E /* MyProfile */,
-				7B26240F2547125200E3435E /* HelperCode */,
-				7B26240D2547110200E3435E /* MainViews */,
-				7B262414254712AA00E3435E /* Definitions */,
-				7B26240E254711D800E3435E /* Chat */,
-				7B262415254712D200E3435E /* BottomBar */,
-				7B2624102547127500E3435E /* SideBar */,
+				7B435F892559704D00DB6CE4 /* Views */,
+				7B435F882559704300DB6CE4 /* Model */,
 				7B3168E0253DD9C800640989 /* iMsgApp.swift */,
 				7B3168E2253DD9C800640989 /* ContentView.swift */,
 				7B3168E4253DD9CB00640989 /* Assets.xcassets */,
@@ -294,8 +280,33 @@
 				7B345F9425480550002D374B /* ColorMenu.swift */,
 				7B345FAF25480985002D374B /* SmallRoundedRectangleThingy.swift */,
 				7B345FB425480B0C002D374B /* NavigationModifier.swift */,
+				7B435F962559846500DB6CE4 /* PlaceHolderModifier.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		7B435F882559704300DB6CE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B351D25254485B300414442 /* Lists.swift */,
+				7B351D2A254486FE00414442 /* Structs.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B435F892559704D00DB6CE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B345FA12548085D002D374B /* Common */,
+				7B345F932548053E002D374B /* NewContact */,
+				7B2624192547284A00E3435E /* MyProfile */,
+				7B26240F2547125200E3435E /* HelperCode */,
+				7B26240D2547110200E3435E /* MainViews */,
+				7B26240E254711D800E3435E /* Chat */,
+				7B262415254712D200E3435E /* BottomBar */,
+				7B2624102547127500E3435E /* SideBar */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +465,7 @@
 				7B345FAB254808F6002D374B /* NewContactNameField.swift in Sources */,
 				7B2624012547070F00E3435E /* BottomBarItem.swift in Sources */,
 				7B3168E1253DD9C800640989 /* iMsgApp.swift in Sources */,
+				7B435F972559846500DB6CE4 /* PlaceHolderModifier.swift in Sources */,
 				7B076DE42545CB2A008251F5 /* SideBarRow.swift in Sources */,
 				7B26242A2547299600E3435E /* Profile.swift in Sources */,
 				7B345FBA2548128C002D374B /* NavigationConfigurator.swift in Sources */,

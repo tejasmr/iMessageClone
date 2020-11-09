@@ -44,7 +44,7 @@ struct Profile: View {
                 
                 // Button to toggle the ColorMenu
                 Button(action: {
-                    self.envObj.showingColorMenu.toggle()
+                    self.envObj.showingMyProfileColorMenu.toggle()
                 }) {
                     Text("Select Color")
                         .foregroundColor(.blue)

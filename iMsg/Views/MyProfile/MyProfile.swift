@@ -22,7 +22,7 @@ struct MyProfile: View {
                 Profile()
                     .padding(.top, 10)
             }
-            if envObj.showingColorMenu {
+            if envObj.showingMyProfileColorMenu {
                 VStack {
                     
                     // List of choosable colors

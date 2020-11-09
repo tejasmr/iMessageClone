@@ -23,6 +23,7 @@ struct NewContactSubview: View {
                 Text("New Contact")
                     .font(.headline)
                     .padding(.bottom, 10)
+                    .foregroundColor(.white)
                 
                 // Goto docs
                 NewContactNameField()
@@ -41,5 +42,7 @@ struct NewContactSubview: View {
 struct NewContactSubview_Previews: PreviewProvider {
     static var previews: some View {
         NewContactSubview()
+            .environmentObject(EnvObj())
+            .background(Color.blue.opacity(0.8))
     }
 }

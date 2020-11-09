@@ -18,13 +18,18 @@ struct NewContactNameField: View {
             // Label UI
             Text("Name:")
                 .font(.headline)
+                .foregroundColor(.white)
             
             // TextField which uses the userName in newContact to get the Name of the new contact
-            TextField("Enter Name", text: $envObj.newContact.userName)
+            TextField("", text: $envObj.newContact.userName)
+                .foregroundColor(Color.white)
+                .placeHolder(Text("Enter Name")
+                                .foregroundColor(.white),
+                             show: envObj.newContact.userName.isEmpty)
                 .disableAutocorrection(true)
                 .padding(10)
                 .overlay(RoundedRectangle(cornerRadius: 50)
-                            .stroke(Color.gray, lineWidth: 1)
+                            .stroke(Color.white, lineWidth: 1)
                             .shadow(radius: 20))
         }
         .padding(10)

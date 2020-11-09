@@ -29,8 +29,14 @@ class EnvObj: ObservableObject {
     // Flag for NewContact
     @Published var showingNewContact: Bool
     
+    // Flag for ColorMenu
+    @Published var showingNewContactColorMenu: Bool
+    
     // Flag for MyProfileView
     @Published var showingMyProfileView: Bool
+    
+    // Flag for ColorMenu
+    @Published var showingMyProfileColorMenu: Bool
     
     // Flag for Chats View
     @Published var showingChats: Bool
@@ -41,8 +47,6 @@ class EnvObj: ObservableObject {
     // Flag for SettingsView
     @Published var showingSettingsView: Bool
     
-    // Flag for ColorMenu
-    @Published var showingColorMenu: Bool
     
     // Object for NewContact
     @Published var newContact: NewContactEnvObj
@@ -57,7 +61,8 @@ class EnvObj: ObservableObject {
         showingChats = false
         showingGroups = false
         showingSettingsView = false
-        showingColorMenu = false
+        showingMyProfileColorMenu = false
+        showingNewContactColorMenu = false
         
         // Default for the User
         you = User(color: Color.blue, name: "Anon")

@@ -18,21 +18,26 @@ struct SelectColor: View {
             // Label UI
             Text("Color:")
                 .fontWeight(.bold)
+                .foregroundColor(.white)
             
             // Spacer UI
             Spacer()
             
             // Button to toggle showingColorMenu flag in the envObj
             Button(action: {
-                self.envObj.showingColorMenu.toggle()
+                self.envObj.showingNewContactColorMenu.toggle()
             }) {
                 Text("Select Color")
-                    .foregroundColor(.blue)
+                    .foregroundColor(.white)
+                    .padding(8)
+                    .background(Color.black)
+                    .cornerRadius(10)
             }
             
             // Label which shows the selected color
             Text(self.envObj.newContact.userColorName)
                 .padding(10)
+                .foregroundColor(.white)
             
             // Spacer UI
             Spacer()

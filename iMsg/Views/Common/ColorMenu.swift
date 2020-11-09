@@ -33,18 +33,23 @@ struct ColorMenu: View {
                         // Set the userColor and userColorName of the newContact object of envObj to the selected color
                         self.envObj.newContact.userColor = chatColor.color
                         self.envObj.newContact.userColorName = chatColor.colorName
+                        
+                        // Toggle the showingNewContactColorMenu when this button is pressed
+                        self.envObj.showingNewContactColorMenu.toggle()
                     }
                     else {
                         // Set the color and colorName of the you object in envObj
                         self.envObj.you.color = chatColor.color
                         self.envObj.you.colorName = chatColor.colorName
+                        
+                        // Toggle the showingMyProfileColorMenu when this button is pressed
+                        self.envObj.showingMyProfileColorMenu.toggle()
                     }
                     
-                    // Toggle the showingColorMenu when this button is pressed
-                    self.envObj.showingColorMenu.toggle()
+                    
                 }) {
                     Text(chatColor.colorName)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.white)
                         .padding(.top, 10)
                         .frame(width: UIScreen.main.bounds.size.width - 100)
                 }
@@ -53,11 +58,13 @@ struct ColorMenu: View {
             Divider()
                 .padding(.horizontal, 20)
         }
+        .background(Color.blue.opacity(0.8))
     }
 }
 
 struct ColorMenu_Previews: PreviewProvider {
     static var previews: some View {
-        ColorMenu(isNewContact: true).environmentObject(EnvObj())
+        ColorMenu(isNewContact: true)
+            .environmentObject(EnvObj())
     }
 }

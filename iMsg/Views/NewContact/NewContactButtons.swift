@@ -33,10 +33,14 @@ struct NewContactButtons: View {
                 }
                 
             }) {
-                Image("NewContact")
+                Image(systemName: "plus.circle.fill")
                     .resizable()
                     .frame(width: 50, height: 50)
+                    .foregroundColor(Color.white)
+                    .background(Color.blue)
+                    .clipShape(Circle())
             }
+            .padding(.horizontal, 2)
             
             // To add the Go to the parent view without doing anything by toggling the showingNewContact flag
             Button(action: {
@@ -44,10 +48,14 @@ struct NewContactButtons: View {
                 // Flag to check it is showing the NewContactView or not
                 self.envObj.showingNewContact.toggle()
             }) {
-                Image("Cancel")
+                Image(systemName: "xmark.circle.fill")
                     .resizable()
                     .frame(width: 50, height: 50)
+                    .foregroundColor(Color.white)
+                    .background(Color.red)
+                    .clipShape(Circle())
             }
+            .padding(.horizontal, 2)
         }
     }
 }

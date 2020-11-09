@@ -32,20 +32,15 @@ struct HalfModalView<Content: View> : View {
                 state = .dragging(translation: drag.translation)
         }
         .onEnded(onDragEnded)
-        return ZStack {
-                //Foreground
-                VStack{
-                    ZStack{
+        return ZStack{
                         self.content()
                             .frame(width: UIScreen.main.bounds.size.width, height:modalHeight)
-                            .clipped()
                     }
                     .offset(y: isShown ? ((self.dragState.isDragging && dragState.translation.height >= 1) ? dragState.translation.height : 0) : modalHeight)
                     .animation(.interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
                     .gesture(drag)
-                    
-                }.KeyboardAwarePadding()
-            }.edgesIgnoringSafeArea(.all)
+                    .KeyboardAwarePadding()
+                    .edgesIgnoringSafeArea(.all)
         
     }
 }

@@ -18,19 +18,18 @@ struct NewContactView: View {
             // We check whether the showingColorMenu flag is set or not
             
             // If showingColorMenu is set, show the ColorMenu
-            if self.envObj.showingColorMenu {
+            if self.envObj.showingNewContactColorMenu {
                 VStack {
                     ColorMenu(isNewContact: true)
                 }
-                .background(Color.white)
-                .frame(width: UIScreen.main.bounds.width - 100)
-                .frame(maxHeight: 240)
             }
             
             // If showingColorMenu is not set, show the NewContactSubview
             else {
                 NewContactSubview()
                     .frame(height: 240)
+                    .background(Color.blue.opacity(0.8))
+                    .cornerRadius(30, corners: [.topLeft, .topRight])
             }
         }
     }
@@ -39,7 +38,8 @@ struct NewContactView: View {
 
 struct NewContactView_Previews: PreviewProvider {
     static var previews: some View {
-        NewContactView().environmentObject(EnvObj())
+        NewContactView()
+            .environmentObject(EnvObj())
     }
 }
 
