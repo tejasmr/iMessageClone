@@ -14,6 +14,11 @@ struct Chats: View {
     var body: some View {
         ZStack {
             
+            
+            ChatMainView()
+                .allowsHitTesting(envObj.showingNewContact ? false : true)
+
+            
             // We check whether the showingSideBar flag is set or not
             
             // If showingSidebar is set, show the Sidebar
@@ -25,12 +30,9 @@ struct Chats: View {
                 }
             }
             
-            // Else we show the ChatMainView View
-            else {
-                ChatMainView()
-            }
         }
         .modifier(NavigationModifier(title: "Chats"))
+
     }
 }
 

@@ -11,27 +11,26 @@ struct Groups: View {
     @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
-        VStack {
+        ZStack {
+            
+            VStack {
+                Spacer()
+                Text("Groups")
+                Spacer()
+            }
+            
             
             // We check whether the showingSideBar flag is set or not
             
             // If showingSidebar is set, show the Sidebar
             if self.envObj.showingSidebar {
                 VStack(alignment: .leading) {
-                    withAnimation {
-                        SideBarView()
-                    }
+                    SideBarView()
+                        .animation(.easeInOut(duration: 200))
                 }
             }
             
-            // Else we show the Groups View
-            else {
-                VStack {
-                    Spacer()
-                    Text("Groups")
-                    Spacer()
-                }
-            }
+            
         }
         .modifier(NavigationModifier(title: "Groups"))
     }

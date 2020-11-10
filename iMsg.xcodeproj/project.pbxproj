@@ -21,6 +21,7 @@
 		7B076E072545DD25008251F5 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076E062545DD25008251F5 /* MyProfileView.swift */; };
 		7B076E0C2545E471008251F5 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076E0B2545E471008251F5 /* Groups.swift */; };
 		7B1804E82541C6BC001DBA2B /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */; };
+		7B1FD698255AB3310039ED20 /* SideBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1FD697255AB3310039ED20 /* SideBarModifier.swift */; };
 		7B2624012547070F00E3435E /* BottomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2624002547070F00E3435E /* BottomBarItem.swift */; };
 		7B26240625470C1F00E3435E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26240525470C1F00E3435E /* SettingsView.swift */; };
 		7B26241B2547285E00E3435E /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26241A2547285E00E3435E /* MyProfile.swift */; };
@@ -80,6 +81,7 @@
 		7B076E062545DD25008251F5 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		7B076E0B2545E471008251F5 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
+		7B1FD697255AB3310039ED20 /* SideBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarModifier.swift; sourceTree = "<group>"; };
 		7B2624002547070F00E3435E /* BottomBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarItem.swift; sourceTree = "<group>"; };
 		7B26240525470C1F00E3435E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7B26241A2547285E00E3435E /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				7B345FAF25480985002D374B /* SmallRoundedRectangleThingy.swift */,
 				7B345FB425480B0C002D374B /* NavigationModifier.swift */,
 				7B435F962559846500DB6CE4 /* PlaceHolderModifier.swift */,
+				7B1FD697255AB3310039ED20 /* SideBarModifier.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				7B345FBA2548128C002D374B /* NavigationConfigurator.swift in Sources */,
 				7B076DDB2545B284008251F5 /* KeyboardAwareModifier.swift in Sources */,
 				7B076DE92545CB62008251F5 /* UserList.swift in Sources */,
+				7B1FD698255AB3310039ED20 /* SideBarModifier.swift in Sources */,
 				7B316914253DDC9000640989 /* ChatBubble.swift in Sources */,
 				7B076E0C2545E471008251F5 /* Groups.swift in Sources */,
 			);

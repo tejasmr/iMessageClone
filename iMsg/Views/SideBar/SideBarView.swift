@@ -20,7 +20,8 @@ struct SideBarView: View {
     
     var body: some View {
         VStack {
-            VStack(alignment: .center, spacing: 2) {
+            VStack(alignment: .leading, spacing: 10) {
+                
                 Button(
                     action: {
                         self.envObj.showingMyProfileView = true
@@ -33,8 +34,8 @@ struct SideBarView: View {
                     }) {
                     SideBarRow(image: "person.crop.circle", text: "My Profile")
                 }
-                Divider()
-                    .padding(.horizontal, 20)
+                
+                
                 Button(
                     action: {
                         self.envObj.showingChats = true
@@ -48,8 +49,7 @@ struct SideBarView: View {
                 ) {
                     SideBarRow(image: "message", text: "Chats")
                 }
-                Divider()
-                    .padding(.horizontal, 20)
+                
                 Button(
                     action: {
                         self.envObj.showingGroups = true
@@ -63,8 +63,7 @@ struct SideBarView: View {
                 ) {
                     SideBarRow(image: "rectangle.stack.person.crop", text: "Groups")
                 }
-                Divider()
-                    .padding(.horizontal, 20)
+                
                 Button(
                     action: {
                         self.envObj.showingSettingsView = true
@@ -78,13 +77,15 @@ struct SideBarView: View {
                 ) {
                     SideBarRow(image: "gear", text: "Settings")
                 }
-                Divider()
-                    .padding(.horizontal, 20)
                 
                 Spacer()
             }
+            .padding(.top, 30)
             .frame(width: UIScreen.main.bounds.size.width - 100, alignment: .center)
-            .background(Color.gray.opacity(0.2))
+            .background(Color.white)
+            .cornerRadius(30)
+            .shadow(radius: 20)
+            
             
         }
         .padding(.trailing, 100)

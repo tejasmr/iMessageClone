@@ -28,7 +28,7 @@ struct NewContactView: View {
             else {
                 NewContactSubview()
                     .frame(height: 240)
-                    .background(Color.blue.opacity(0.8))
+                    .background(Color.blue.opacity(0.9))
                     .cornerRadius(30, corners: [.topLeft, .topRight])
             }
         }

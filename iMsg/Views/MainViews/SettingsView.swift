@@ -13,7 +13,15 @@ struct SettingsView: View {
     @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
-        VStack {
+        ZStack {
+            
+            VStack {
+                Spacer()
+                Text("Settings View And Stuffs Placeholder")
+                Spacer()
+            }
+            .allowsHitTesting(envObj.showingNewContact ? false : true)
+
             
             // We check whether the showingSideBar flag is set or not
             
@@ -24,15 +32,6 @@ struct SettingsView: View {
                     withAnimation {
                         SideBarView()
                     }
-                }
-            }
-            
-            // Else we show the Settings View
-            else {
-                VStack {
-                    Spacer()
-                    Text("Settings View")
-                    Spacer()
                 }
             }
         }

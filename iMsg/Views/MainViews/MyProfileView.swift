@@ -11,7 +11,15 @@ struct MyProfileView: View {
     @EnvironmentObject var envObj: EnvObj
     
     var body: some View {
-        VStack {
+        ZStack {
+            
+            
+            VStack {
+                MyProfile()
+                Spacer()
+            }
+            .allowsHitTesting(envObj.showingNewContact ? false : true)
+            
             
             // We check whether the showingSideBar flag is set or not
             
@@ -24,13 +32,6 @@ struct MyProfileView: View {
                 }
             }
             
-            // Else we show the MyProfile View
-            else {
-                VStack {
-                    MyProfile()
-                    Spacer()
-                }
-            }
         }
         .modifier(NavigationModifier(title: "My Profile"))
     }
