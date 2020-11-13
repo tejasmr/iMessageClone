@@ -20,15 +20,16 @@ struct Groups: View {
             }
             
             
-            // We check whether the showingSideBar flag is set or not
             
-            // If showingSidebar is set, show the Sidebar
-            if self.envObj.showingSidebar {
-                VStack(alignment: .leading) {
-                    SideBarView()
-                        .animation(.easeInOut(duration: 200))
-                }
+            VStack(alignment: .leading) {
+                SideBarView()
             }
+            .rotation3DEffect(
+                .degrees(self.envObj.showingSidebar ? 0 : 90),
+                axis: (x: 0, y: 1, z: 0)
+            )
+            .animation(.default)
+            .offset(x: self.envObj.showingSidebar ? 0 : -UIScreen.main.bounds.width, y: 0)
             
             
         }

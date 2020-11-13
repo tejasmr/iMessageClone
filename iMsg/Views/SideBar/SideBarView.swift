@@ -83,7 +83,7 @@ struct SideBarView: View {
             .padding(.top, 30)
             .frame(width: UIScreen.main.bounds.size.width - 100, alignment: .center)
             .background(Color.white)
-            .cornerRadius(30)
+            .cornerRadius(30, corners: [.topRight, .bottomRight])
             .shadow(radius: 20)
             
             

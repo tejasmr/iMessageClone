@@ -22,6 +22,7 @@
 		7B076E0C2545E471008251F5 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B076E0B2545E471008251F5 /* Groups.swift */; };
 		7B1804E82541C6BC001DBA2B /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */; };
 		7B1FD698255AB3310039ED20 /* SideBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1FD697255AB3310039ED20 /* SideBarModifier.swift */; };
+		7B231571255C3433003A9084 /* SideBarToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B231570255C3433003A9084 /* SideBarToggleButton.swift */; };
 		7B2624012547070F00E3435E /* BottomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2624002547070F00E3435E /* BottomBarItem.swift */; };
 		7B26240625470C1F00E3435E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26240525470C1F00E3435E /* SettingsView.swift */; };
 		7B26241B2547285E00E3435E /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26241A2547285E00E3435E /* MyProfile.swift */; };
@@ -82,6 +83,7 @@
 		7B076E0B2545E471008251F5 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		7B1804E72541C6BC001DBA2B /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
 		7B1FD697255AB3310039ED20 /* SideBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarModifier.swift; sourceTree = "<group>"; };
+		7B231570255C3433003A9084 /* SideBarToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarToggleButton.swift; sourceTree = "<group>"; };
 		7B2624002547070F00E3435E /* BottomBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarItem.swift; sourceTree = "<group>"; };
 		7B26240525470C1F00E3435E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7B26241A2547285E00E3435E /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				7B345FB425480B0C002D374B /* NavigationModifier.swift */,
 				7B435F962559846500DB6CE4 /* PlaceHolderModifier.swift */,
 				7B1FD697255AB3310039ED20 /* SideBarModifier.swift */,
+				7B231570255C3433003A9084 /* SideBarToggleButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				7B351D26254485B300414442 /* Lists.swift in Sources */,
 				7B31690F253DDC4E00640989 /* ChatView.swift in Sources */,
 				7B076DF32545CBD9008251F5 /* Chats.swift in Sources */,
+				7B231571255C3433003A9084 /* SideBarToggleButton.swift in Sources */,
 				7B345F9D2548082B002D374B /* NewContactButtons.swift in Sources */,
 				7B345FB525480B0C002D374B /* NavigationModifier.swift in Sources */,
 				7B345F9525480550002D374B /* ColorMenu.swift in Sources */,

@@ -98,6 +98,7 @@ struct BottomBar: View {
                 
             }
             .padding(.vertical, 5)
+            .padding(.top, 10)
             .frame(width: UIScreen.main.bounds.size.width, height: 60)
         }
         .frame(width: UIScreen.main.bounds.size.width)

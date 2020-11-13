@@ -17,22 +17,15 @@ struct NavigationModifier: ViewModifier {
         content
             
             // Sidebar Icon and toggle the showingSidebar flag in the envObj
-            .navigationBarItems(leading: Button(action: {
-                self.envObj.showingSidebar.toggle()
-            }) {
-                Image(systemName: "line.horizontal.3")
-                    .resizable()
-                    .frame(width: 25, height: 18)
-                    .foregroundColor(Color.white)
-            })
+            .navigationBarItems(leading: SideBarToggleButton())
             
             // Title of the main view
             .navigationBarTitle(title, displayMode: .inline)
             
             // Configure the background and foregroundColor of the Navigation bar of the main view
             .background(NavigationConfigurator { nc in
-                nc.navigationBar.barTintColor = UIColor(Color.black)
-                nc.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+                nc.navigationBar.barTintColor = UIColor(Color.white)
+                nc.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
             })
     }
 }

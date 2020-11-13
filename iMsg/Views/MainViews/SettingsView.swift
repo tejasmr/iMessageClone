@@ -21,17 +21,19 @@ struct SettingsView: View {
                 Spacer()
             }
             .allowsHitTesting(envObj.showingNewContact ? false : true)
-
             
-            // We check whether the showingSideBar flag is set or not
             
-            // If showingSidebar is set, show the Sidebar
             
-            if self.envObj.showingSidebar {
-                VStack(alignment: .leading) {
-                    withAnimation {
-                        SideBarView()
-                    }
+            VStack(alignment: .leading) {
+                withAnimation {
+                    SideBarView()
+                        .rotation3DEffect(
+                            .degrees(self.envObj.showingSidebar ? 0 : 90),
+                            axis: (x: 0, y: 1, z: 0)
+                        )
+                        .animation(.default)
+                        .offset(x: self.envObj.showingSidebar ? 0 : -UIScreen.main.bounds.width, y: 0)
+                    
                 }
             }
         }
